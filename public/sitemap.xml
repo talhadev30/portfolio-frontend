@@ -8,9 +8,20 @@
 
 
 <url>
-  <loc>https://talhadev-dev.vercel.app/</loc>
-  <lastmod>2026-06-12T15:40:01+00:00</lastmod>
-</url>
+    <loc>https://talhadev-dev.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://talhadev-dev.vercel.app/work</loc>
+  </url>
+
+  <url>
+    <loc>https://talhadev-dev.vercel.app/info</loc>
+  </url>
+
+  <url>
+    <loc>https://talhadev-dev.vercel.app/contect</loc>
+  </url>
 
 
 </urlset>
