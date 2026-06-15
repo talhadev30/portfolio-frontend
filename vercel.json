@@ -1,7 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/work",
+      "destination": "/"
+    },
+    {
+      "source": "/info",
+      "destination": "/"
+    },
+    {
+      "source": "/contect",
       "destination": "/"
     }
   ]
