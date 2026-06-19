@@ -1,54 +1,63 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Counter from "./Counter";
 
 const Loder = () => {
+
+  const container = useRef(null)
   
   // drawsvg && loding animation 
-  useGSAP(() => {
-    const body = document.querySelector("body")
-    const paths = document.querySelectorAll("path");
-    const tl = gsap.timeline()
+useGSAP(() => {
+
+  const ctx = gsap.context(() => {
+
+    const body = document.body;
+    const paths = container.current.querySelectorAll("path");
+
+    const tl = gsap.timeline();
+
     paths.forEach((path) => {
-      const lenght = path.getTotalLength();
-      path.style.strokeDasharray = lenght
-      path.style.strokeDashoffset = lenght
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
     });
-    tl.set(body,{
-      overflow:"hidden"
-    })
+
+    tl.set(body, { overflow: "hidden" });
+
     tl.to(paths, {
       strokeDashoffset: 0,
       duration: 1.5,
       ease: "power4.in",
       fill: "#fff",
-      stagger: 0.3, // plays one after another
+      stagger: 0.3,
     });
 
-    tl.to("svg", {
+    tl.to(container.current.querySelector("svg"), {
       y: -100,
       duration: 1,
-      ease: "power2.in",
       opacity: 0,
-    })
-    tl.to(".parint", {
+      ease: "power2.in",
+    });
+
+    tl.to(container.current, {
       height: 0,
       duration: 1,
       onComplete: () => {
-        gsap.set(".parint", {
-          display: "none",
-        })
-      }
-    })
-    
-    tl.set(body,{
-      overflow:"auto"
-    })
-  });
+        gsap.set(container.current, { display: "none" });
+      },
+    });
+
+    tl.set(body, { overflow: "auto" });
+
+  }, container);
+
+  return () => ctx.revert();
+
+}, []);
 
   return (
-    <div className='parint pointer-events-auto h-full w-full bg-black z-50 fixed top-0 left-0 overflow-hidden flex items-center justify-center'>
+    <div ref={container} className='parint pointer-events-auto h-full w-full bg-black z-50 fixed top-0 left-0 overflow-hidden flex items-center justify-center'>
       <div className="overflow-hidden h-20 w-[20rem] flex justify-center mb-20">
         <svg className="gap-28 stroke-1" viewBox="1 -1 200 40" stroke="white" height={100} width={900} xmlns="http://www.w3.org/2000/svg">
           {/* h */}

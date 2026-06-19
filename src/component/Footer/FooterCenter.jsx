@@ -12,7 +12,7 @@ const FooterCenter = () => {
                         <p className='text-sm'>leving in pakistan <br /> <span className='flex items-center gap-1'>with <Heart size={14} /></span></p>
                     </div>
                     <div className='flex items-center justify-center font-[League] '>
-                        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='btn relative text-center my-15 hover:text-white py-1 px-3 border text-[18px] rounded-3xl overflow-hidden'><a className='z-10 relative uppercase '>back to top</a></button>
+                        <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='whitespace-nowrap btn relative text-center my-15 hover:text-white py-1 px-3 border text-[18px] rounded-3xl overflow-hidden'><a className='z-10 relative uppercase '>back to top</a></button>
                     </div>
                 </div>
                 <div className='md:gap-15 lg:gap-15 gap-40 flex items-center justify-center'>

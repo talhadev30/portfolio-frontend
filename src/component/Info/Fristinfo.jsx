@@ -32,45 +32,45 @@ const Firsetinfo = () => {
       },
     );
   });
-// mouse move animation
- const ImgPositionHandlear = (e) => {
-  const { clientX, clientY } = e;
+  // mouse move animation
+  const ImgPositionHandlear = (e) => {
+    const { clientX, clientY } = e;
 
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
 
-  const deltaX = (clientX - centerX) / centerX;
-  const deltaY = (clientY - centerY) / centerY;
+    const deltaX = (clientX - centerX) / centerX;
+    const deltaY = (clientY - centerY) / centerY;
 
-  const moveX = deltaX * 180;
-  const moveY = deltaY * 180;
+    const moveX = deltaX * 180;
+    const moveY = deltaY * 180;
 
-  const rotateX = deltaY * 8;
-  const rotateY = deltaX * 8;
-  const rotateZ = deltaX * 3;
+    const rotateX = deltaY * 8;
+    const rotateY = deltaX * 8;
+    const rotateZ = deltaX * 3;
 
-  gsap.to(imgref.current.parentElement, {
-    x: moveX,
-    y: moveY,
-    rotationX: -rotateX,
-    rotationY: rotateY,
-    rotationZ: rotateZ,
-    duration: 3, // smooth lag effect
-    ease: "power3.out",
-  });
-};
-// mouse move animation reset
-const ImgResetHandlear = () => {
-  gsap.to(imgref.current.parentElement, {
-    x: 0,
-    y: 0,
-    rotationX: 0,
-    rotationY: 0,
-    rotationZ: 0,
-    duration: 0.6,
-    ease: "power4.in",
-  });
-};
+    gsap.to(imgref.current.parentElement, {
+      x: moveX,
+      y: moveY,
+      rotationX: -rotateX,
+      rotationY: rotateY,
+      rotationZ: rotateZ,
+      duration: 3, // smooth lag effect
+      ease: "power3.out",
+    });
+  };
+  // mouse move animation reset
+  const ImgResetHandlear = () => {
+    gsap.to(imgref.current.parentElement, {
+      x: 0,
+      y: 0,
+      rotationX: 0,
+      rotationY: 0,
+      rotationZ: 0,
+      duration: 0.6,
+      ease: "power4.in",
+    });
+  };
 
   return (
     <div
@@ -95,11 +95,14 @@ const ImgResetHandlear = () => {
           </p>
         </div>
         <div className="lg:h-1/4 lg:w-1/4 h-66 w-66 absolute top-2/7 lg:top-2/8 md:top-2/6 -z-50 left-2/4 -translate-y-2/4 -translate-x-2/4">
-          <img
-            ref={imgref}
-            src="./my.png"
-            className="h-max w-full grayscale rounded-3xl transition-transform duration-200"
-          />
+          <div className="w-full overflow-hidden">
+            <img
+              ref={imgref}
+              src="./my.png"
+              alt="talha image"
+              className="w-full h-auto object-cover rounded-3xl"
+            />
+          </div>
         </div>
       </div>
     </div>
