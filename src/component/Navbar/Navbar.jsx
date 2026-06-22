@@ -112,7 +112,7 @@ const Navbar = (props) => {
           </div>
           <div className='border-t-4 flex lg:flex-row items-start justify-start lg:justify-between py-5 flex-wrap gap-y-10 gap-20'>
             <Sociallink name="facebook" label='facebook profile' Link="https://www.facebook.com/profile.php?id=61589720709211" />
-            <Sociallink name="instagram" label='instagram profile' Link="https://www.instagram.com/talha40404/" />
+            <Sociallink name="instagram" label='instagram profile' Link="https://www.instagram.com/talha.dev30/" />
             <Sociallink name="linkedin" label='linkdin profile' Link="https://www.linkedin.com/in/m-talha-salman-66832839b" />
             <Sociallink name="github" label='github profile' Link="https://www.github.com/talha2343" />
           </div>
