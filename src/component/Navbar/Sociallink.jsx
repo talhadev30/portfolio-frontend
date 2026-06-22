@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import React from 'react'
 
-const Sociallink = ({ name, Link }) => {
+const Sociallink = ({ name, Link , label }) => {
 
   // split all text 
   useGSAP(() => {
@@ -46,7 +46,8 @@ const Sociallink = ({ name, Link }) => {
       <div className="row inner-wrapper select-none leading-[3vw] h-7 xl:h-14 lg:h-10 md:h-10 overflow-hidden flex flex-col translate-y-0" onMouseEnter={handleHoverIn}
               onMouseLeave={handleHoverOut}>
               <ul>
-                <li className='split text-3xl lg:text-[3vw] md:text-5xl tracking-tighter uppercase '><a href={Link} >{name}</a></li>
+                <li className='split text-3xl lg:text-[3vw] md:text-5xl tracking-tighter uppercase '><a href={Link} aria-label={label} target="_blank"
+  rel="noopener noreferrer">{name}</a></li>
                 <li className=' split text-3xl  absolute left-0 top-full lg:text-[3vw] md:text-5xl leading-none tracking-tighter uppercase'><a href={Link} >{name}</a></li>
               </ul>
             </div>

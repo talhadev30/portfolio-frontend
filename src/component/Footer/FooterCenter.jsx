@@ -28,10 +28,14 @@ const FooterCenter = () => {
                     <div>
                         <h6 className='font-[League] text-3xl uppercase tracking-tight'>social</h6>
                         <ul className='list-none uppercase py-3 flex flex-col gap-2'>
-                            <li className='hover:text-black/60'><a href="https://www.linkedin.com/in/talha-salman-442136415/">linkedin</a></li>
-                            <li className='hover:text-black/60'><a href="https://www.instagram.com/talha.dev30/">instagram</a></li>
-                            <li className='hover:text-black/60'><a href="https://www.facebook.com/profile.php?id=61590847734134">facebook</a></li>
-                            <li className='hover:text-black/60'><a href="https://github.com/talha2343">github</a></li>
+                            <li className='hover:text-black/60'><a href="https://www.linkedin.com/in/talha-salman-442136415/" aria-label="LinkedIn Profile" target="_blank"
+                                rel="noopener noreferrer" >linkedin</a></li>
+                            <li className='hover:text-black/60'><a href="https://www.instagram.com/talha.dev30/" aria-label="instagram Profile" target="_blank"
+                                rel="noopener noreferrer">instagram</a></li>
+                            <li className='hover:text-black/60'><a href="https://www.facebook.com/profile.php?id=61590847734134" aria-label="facebook Profile" target="_blank"
+                                rel="noopener noreferrer">facebook</a></li>
+                            <li className='hover:text-black/60'><a href="https://github.com/talha2343" aria-label="github Profile" target="_blank"
+                                rel="noopener noreferrer">github</a></li>
                         </ul>
                     </div>
                 </div>
