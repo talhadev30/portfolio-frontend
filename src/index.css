@@ -3,6 +3,7 @@
 @font-face {
     font-family: "League";
     src: url(../public/LeagueGothic-Regular.otf);
+    font-display: swap;
 }
 
 ::-webkit-scrollbar {
