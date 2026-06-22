@@ -108,9 +108,9 @@ const Workflowcard = (props) => {
                     <div className='flex items-start justify-between w-full font-[League]'>
                         <div className='m-7 lg:m-10'>
                             <h4 className='text-6xl'>0{props.numbers}</h4>
-                            <h2 className='text-8xl uppercase text-white'>
+                            <h4 className='text-8xl uppercase text-white'>
                                 {props.title}
-                            </h2>
+                            </h4>
                         </div>
                         <div onClick={!ismobile ? undefined : clicked} className='lg:hidden md:hidden h-20 w-20 relative flex items-center justify-center'>
                             <div ref={rotate} className='w-1 h-7 absolute bg-white'></div>

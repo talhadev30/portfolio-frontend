@@ -26,10 +26,10 @@ const Projecttext = (props) => {
 
   return (
     <div ref={containerref} className='lg:p-20 p-5 overflow-hidden'>
-      <h1 ref={revelref} className='font-[League] tracking-tighter text-6xl md:text-[8rem] lg:text-[10rem] mb-10 lg:leading-[10vw] 2xl:leading-[8.5vw] uppercase'>
+      <h3 ref={revelref} className='font-[League] tracking-tighter text-6xl md:text-[8rem] lg:text-[10rem] mb-10 lg:leading-[10vw] 2xl:leading-[8.5vw] uppercase'>
         {props.text1}<br />
         {props.text2}
-      </h1>
+      </h3>
     </div>
   )
 }

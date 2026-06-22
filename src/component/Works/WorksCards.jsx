@@ -43,16 +43,16 @@ const WorksCards = () => {
         <div className="bg-black min-h-screen relative">
             <div className='panel h-screen w-screen md:gap-y-26 gap-y-10 py-35 px-5 lg:px-20 font-[League] flex flex-col lg:flex-row justify-between lg:items-center items-start '>
                 <div >
-                    <div ref={HeroText} className='overflow-hidden text-9xl text-nowrap md:text-[11rem] lg:text-[14vw] 2xl:text-[16vw] 2xl:leading-[13vw] uppercase leading-26 lg:leading-[10.9vw] md:leading-[16.9vw] tracking-tighter'>
+                    <h1 ref={HeroText} className='overflow-hidden text-9xl text-nowrap md:text-[11rem] lg:text-[14vw] 2xl:text-[16vw] 2xl:leading-[13vw] uppercase leading-26 lg:leading-[10.9vw] md:leading-[16.9vw] tracking-tighter'>
                         <div className='overflow-hidden'>my</div>
                         <div className='overflow-hidden'>recent</div>
                         <div className='overflow-hidden'>works</div>
-                    </div>
+                    </h1>
                 </div>
             </div>
-            <div className='relative'><StickyCard img={"/product1.png"} ProductName={"headphone"} />
-                <StickyCard img={"/product2.png"} ProductName={"hand cream"} />
-                <StickyCard img={"/product3.png"} ProductName={"Mobile phone"} />
+            <div className='relative'><StickyCard img={"/product1.png"} alt={"Restaurant Website"} ProductName={"headphone"} />
+                <StickyCard img={"/product2.png"} alt={"E-Commerce Website"} ProductName={"hand cream"} />
+                <StickyCard img={"/product3.png"} alt={"School Management System"} ProductName={"Mobile phone"} />
             </div>
         </div>
     )

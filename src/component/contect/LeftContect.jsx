@@ -12,7 +12,7 @@ const leftContect = () => {
       </div>
 
       <div className="mt-16 uppercase text-sm leading-5">
-        <p>* Available for new projects</p>
+        <p><span className="text-green-400">*</span> Available for new projects</p>
         <p>now</p>
       </div>
     </div>

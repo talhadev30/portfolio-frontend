@@ -35,7 +35,7 @@ const Bottomcontent = () => {
                     <p className='text-lg ps-25 md:ps-40 lg:ps-0 lg:text-sm'>I’m in the process of learning web development, experimenting with projects inspired by top-tier brands.</p>
                 </div>
                 <div className='order-1 lg:order-2 w-full overflow-hidden'>
-                    <h1 ref={HeroText} className='text-nowrap ps-12 lg:ps-0  text-7xl sm:text-7xl md:text-9xl 2xl:text-[16vw] lg:text-[14vw]  tracking-tighter font-[League] uppercase text-center'>web developer</h1>
+                    <h2 ref={HeroText} className='text-nowrap ps-12 lg:ps-0  text-7xl sm:text-7xl md:text-9xl 2xl:text-[16vw] lg:text-[14vw]  tracking-tighter font-[League] uppercase text-center'>web developer</h2>
                 </div>
             </div>
         </div>

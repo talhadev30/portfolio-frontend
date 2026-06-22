@@ -7,9 +7,8 @@ const InfoLeft = () => {
         a little bit about me
       </h2>
       <p className="text-sm py-5 md:text-2xl lg:text-sm 2xl:text-lg">
-       I’m a passionate web developer focused on building modern, responsive, and user-friendly web applications. I enjoy turning ideas into real-world digital experiences using clean code and thoughtful design.
-
-I continuously explore new technologies and improve my skills by working on practical projects inspired by real-world products and modern UI designs. My goal is to grow as a developer and create impactful, high-quality web experiences.
+        I’m a passionate web developer focused on building modern, responsive, and user-friendly web applications. I enjoy turning ideas into real-world digital experiences using clean code and thoughtful design.
+        I continuously explore new technologies and improve my skills by working on practical projects inspired by real-world products and modern UI designs. My goal is to grow as a developer and create impactful, high-quality web experiences.
       </p>
     </div>
   );

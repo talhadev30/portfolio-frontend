@@ -99,7 +99,7 @@ const Firsetinfo = () => {
             <img
               ref={imgref}
               src="./my.png"
-              alt="talha image"
+              alt="Talha Developer"
               className="w-full h-auto object-cover rounded-3xl"
             />
           </div>

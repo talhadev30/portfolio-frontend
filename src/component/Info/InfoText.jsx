@@ -27,7 +27,7 @@ const InfoText = (props) => {
     }, []);
   return (
        <div className='w-max overflow-hidden text-center'>
-          <h1  ref={HeroText} className='text-nowrap px-3 text-8xl sm:text-7xl md:text-9xl lg:text-[14rem] 2xl:text-[16rem] tracking-tighter font-[League] uppercase lg:text-center'>{props.text}</h1>
+          <h2 ref={HeroText} className='text-nowrap px-3 text-8xl sm:text-7xl md:text-9xl lg:text-[14rem] 2xl:text-[16rem] tracking-tighter font-[League] uppercase lg:text-center'>{props.text}</h2>
         </div>
   )
 }

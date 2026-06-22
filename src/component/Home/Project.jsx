@@ -44,9 +44,9 @@ const Project = () => {
     <Projecttext text1={"Latest"} text2={"project"} />
 
     <div className='relative'>
-      <StickyCard img={"/product1.png"} ProductName={"headphone"} />
-      <StickyCard img={"/product2.png"} ProductName={"hand cream"} />
-      <StickyCard img={"/product3.png"} ProductName={"Mobile phone"} />
+      <StickyCard img={"/product1.png"} alt={"Restaurant Website"} ProductName={"headphone"} />
+      <StickyCard img={"/product2.png"} alt={"E-Commerce Website"} ProductName={"hand cream"} />
+      <StickyCard img={"/product3.png"} alt={"School Management System"} ProductName={"Mobile phone"} />
     </div>
 
     <div className="flex items-center justify-center font-[League] ">
