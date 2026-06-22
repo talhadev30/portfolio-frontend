@@ -42,16 +42,42 @@ const Sociallink = ({ name, Link , label }) => {
   };
 
 
-  return (
-      <div className="row inner-wrapper select-none leading-[3vw] h-7 xl:h-14 lg:h-10 md:h-10 overflow-hidden flex flex-col translate-y-0" onMouseEnter={handleHoverIn}
-              onMouseLeave={handleHoverOut}>
-              <ul>
-                <li className='split text-3xl lg:text-[3vw] md:text-5xl tracking-tighter uppercase '><a href={Link} aria-label={label} target="_blank"
-  rel="noopener noreferrer">{name}</a></li>
-                <li className=' split text-3xl  absolute left-0 top-full lg:text-[3vw] md:text-5xl leading-none tracking-tighter uppercase'><a href={Link} >{name}</a></li>
-              </ul>
-            </div>
-  )
-}
+   return (
+    <div
+      className="row inner-wrapper select-none leading-[3vw] h-7 xl:h-14 lg:h-10 md:h-10 overflow-hidden flex flex-col translate-y-0"
+      onMouseEnter={handleHoverIn}
+      onMouseLeave={handleHoverOut}
+    >
+      <ul className="relative">
+        {/* Main Link */}
+        <li className="text-3xl lg:text-[3vw] md:text-5xl tracking-tighter uppercase">
+          <a
+            href={Link}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="split">{name}</span>
+          </a>
+        </li>
+
+        {/* Animated Copy */}
+        <li
+          aria-hidden="true"
+          className="absolute left-0 top-full text-3xl lg:text-[3vw] md:text-5xl leading-none tracking-tighter uppercase"
+        >
+          <a
+            href={Link}
+            target="_blank"
+            rel="noopener noreferrer"
+            tabIndex="-1"
+          >
+            <span className="split">{name}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 export default Sociallink
