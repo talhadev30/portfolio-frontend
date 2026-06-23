@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <div className='relative w-full bg-black text-white'>
-      <Loder />
+      {/* <Loder /> */}
       <Navbar />
       <main className='relative z-20 bg-black mb-[100vh]'>
         <Routes>
