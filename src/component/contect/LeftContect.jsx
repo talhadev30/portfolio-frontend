@@ -5,9 +5,9 @@ const leftContect = () => {
     <div className="flex flex-col justify-between h-full">
       <div>
         <h1 className="uppercase font-[League] text-[5rem] sm:text-[7rem] md:text-[9rem] leading-[0.9] tracking-tight ">
-          let’s get
+          Let's Build
           <br />
-          in touch
+          Something Amazing 
         </h1>
       </div>
 

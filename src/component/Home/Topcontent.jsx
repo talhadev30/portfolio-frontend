@@ -34,7 +34,7 @@ const Topcontent = () => {
           <h1 ref={HeroText} className='text-nowrap text-7xl sm:text-7xl md:text-9xl 2xl:text-[16vw] lg:text-[14vw] tracking-tighter font-[League] uppercase lg:text-center'>hi i'am talha</h1>
         </div>
         <div className='w-full md:w-[70vw] lg:w-[23vw] flex items-center justify-start px-2'>
-          <p className='text-lg md:ps-0 lg:ps-0 lg:text-sm'>I’m building my journey as a web developer by creating modern, responsive web applications.</p>
+          <p className='text-lg md:ps-0 lg:ps-0 lg:text-sm'>I build fast, responsive, and modern web applications using React, JavaScript, Tailwind CSS, and Node.js. Passionate about creating beautiful user experiences and solving real-world problems through code.</p>
         </div>
 
       </div>
