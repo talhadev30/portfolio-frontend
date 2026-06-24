@@ -22,7 +22,7 @@ const FooterCenter = () => {
                             <li className='hover:text-black/60'><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</Link></li>
                             <li className='hover:text-black/60'><Link to="/work" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Works</Link></li>
                             <li className='hover:text-black/60'><Link to="/info" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Info</Link></li>
-                            <li className='hover:text-black/60'><Link to="/contect" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact</Link></li>
+                            <li className='hover:text-black/60'><Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact</Link></li>
                         </ul>
                     </div>
                     <div>

@@ -108,7 +108,7 @@ const Navbar = (props) => {
           </div>
           <div className='w-full mb-5 lg:mb-16 gap-5 md:flex-row lg:flex-row flex-col flex items-start lg:items-center justify-between md:overflow-hidden lg:overflow-hidden overflow-visible'>
             <Navlink name="Info" path="/info" />
-            <Navlink name="Contact" path="/contect" />
+            <Navlink name="Contact" path="/contact" />
           </div>
           <div className='border-t-4 flex lg:flex-row items-start justify-start lg:justify-between py-5 flex-wrap gap-y-10 gap-20'>
             <Sociallink name="facebook" label='facebook profile' Link="https://www.facebook.com/profile.php?id=61589720709211" />
