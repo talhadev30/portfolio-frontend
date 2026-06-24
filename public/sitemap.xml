@@ -1,27 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset
-      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
-            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+   https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
-<url>
-    <loc>https://talhadev-dev.vercel.app/</loc>
+  <url>
+    <loc>https://talhaportfolio.dpdns.org/</loc>
   </url>
 
   <url>
-    <loc>https://talhadev-dev.vercel.app/work</loc>
+    <loc>https://talhaportfolio.dpdns.org/work</loc>
   </url>
 
   <url>
-    <loc>https://talhadev-dev.vercel.app/info</loc>
+    <loc>https://talhaportfolio.dpdns.org/info</loc>
   </url>
 
   <url>
-    <loc>https://talhadev-dev.vercel.app/contect</loc>
+    <loc>https://talhaportfolio.dpdns.org/contact</loc>
   </url>
-
 
 </urlset>
