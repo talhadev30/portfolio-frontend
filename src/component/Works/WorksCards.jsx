@@ -45,8 +45,8 @@ const WorksCards = () => {
                 <div >
                     <h1 ref={HeroText} className='overflow-hidden text-9xl text-nowrap md:text-[11rem] lg:text-[14vw] 2xl:text-[16vw] 2xl:leading-[13vw] uppercase leading-26 lg:leading-[10.9vw] md:leading-[16.9vw] tracking-tighter'>
                         <div className='overflow-hidden'>my</div>
-                        <div className='overflow-hidden'>recent</div>
-                        <div className='overflow-hidden'>works</div>
+                        <div className='overflow-hidden'>Featured</div>
+                        <div className='overflow-hidden'>Projects</div>
                     </h1>
                 </div>
             </div>

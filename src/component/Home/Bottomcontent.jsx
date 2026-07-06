@@ -32,7 +32,8 @@ const Bottomcontent = () => {
         <div className='h-full w-full p-2 lg:p-0 flex items-center lg:justify-center justify-end'>
             <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row items-start lg:items-center justify-center gap-2'>
                 <div className='paragraf order-2 lg:order-1 w-full md:w-[70vw] lg:w-[20vw] flex items-center justify-start px-2'>
-                    <p className='text-lg ps-25 md:ps-40 lg:ps-0 lg:text-sm'>I turn ideas into fast, scalable, and user-friendly web applications by combining clean, maintainable code with modern and responsive design. I enjoy solving problems, learning new technologies.</p>
+                    <p className='text-lg ps-25 md:ps-40 lg:ps-0 lg:text-sm'>I turn ideas into fast, scalable, and responsive web applications with clean code, modern design, and seamless user experiences.
+</p>
                 </div>
                 <div className='order-1 lg:order-2 w-full overflow-hidden'>
                     <h2 ref={HeroText} className='text-nowrap ps-12 lg:ps-0  text-7xl sm:text-7xl md:text-9xl 2xl:text-[16vw] lg:text-[14vw]  tracking-tighter font-[League] uppercase text-center'>web developer</h2>

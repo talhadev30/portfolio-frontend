@@ -4,12 +4,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Navlink from './Navlink'
 import Sociallink from './Sociallink'
+import Cvbutton from './Cvbutton'
 
 const Navbar = (props) => {
   const [open, setOpen] = useState(false)
   const rotater = useRef(null)
   const rotaters = useRef(null)
   const hamburger = useRef(null)
+  const Buttonref = useRef(null)
   const locaation = useLocation()
 
   
@@ -36,7 +38,8 @@ const Navbar = (props) => {
       ease: "power3.in",
     });
 
-    gsap.to("nav", { color: "#000" });
+    gsap.to("nav", { color: "#000" , });
+    gsap.to(Buttonref.current, { color: "#000" , borderColor : "#000" });
 
     gsap.to([rotater.current, rotaters.current], {
       background: "black",
@@ -75,6 +78,8 @@ const Navbar = (props) => {
     });
 
     gsap.to("nav", { color: "#fff" });
+    gsap.to(Buttonref.current, { color: "#fff" , borderColor : "#fff" });
+
 
     gsap.to([rotater.current, rotaters.current], {
       background: "white",
@@ -95,9 +100,14 @@ const Navbar = (props) => {
     <>
       <nav className='h-14 w-full px-5 lg:px-20 flex font-[League] items-center py-10 justify-between z-40 pointer-coarse: fixed top-0 left-0'>
         <h1 className='text-3xl font-medium hover:text-zz'>Talha</h1>
+        <div className='flex items-center  justify-center'>
+          <div ref={Buttonref} className='flex items-center justify-center'>
+            <Cvbutton />
+            </div>
         <div onClick={menuanimation} className='gap-2 p-5 flex flex-col items-center justify-center'>
           <div ref={rotater} className='h-1 w-12 bg-white'></div>
           <div ref={rotaters} className='h-1 w-12 bg-white'></div>
+        </div>
         </div>
       </nav>
       <div ref={hamburger} className='pointer-events-auto lg:max-h-screen h-[110%] w-full z-35 bg-mist-300 fixed -top-[110%] lg:-top-full  font-[League] text-black overflow-y-hidden'>

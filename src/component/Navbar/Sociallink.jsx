@@ -1,78 +1,93 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { SplitText } from 'gsap/SplitText';
-import React from 'react'
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
 
-const Sociallink = ({ name, Link , label }) => {
+gsap.registerPlugin(SplitText);
 
-  // split all text 
-  useGSAP(() => {
-    let ctx = gsap.context(() => {
-      document.querySelectorAll(".split").forEach((el) => {
-        new SplitText(el, { type: "chars", charsClass: "chars" });
+const Sociallink = ({ name, Link, label }) => {
+  const wrapper = useRef(null);
+
+  useGSAP(
+    () => {
+      const splits = [];
+
+      wrapper.current.querySelectorAll(".split").forEach((el) => {
+        splits.push(
+          new SplitText(el, {
+            type: "chars",
+            charsClass: "chars",
+          })
+        );
       });
-    });
 
-    return () => ctx.revert();
-  });
-  // hoverin animation
+      return () => {
+        splits.forEach((split) => split.revert());
+      };
+    },
+    { scope: wrapper }
+  );
+
+  // Hover In
   const handleHoverIn = (e) => {
     const el = e.currentTarget;
     const chars = el.querySelectorAll(".chars");
 
-    if (!el._tl) {
-      el._tl = gsap.timeline({ paused: true });
+    if (!el.timeline) {
+      el.timeline = gsap.timeline({ paused: true });
 
-      el._tl.to(chars, {
+      el.timeline.to(chars, {
         yPercent: -100,
-        stagger: 0.02,
+        stagger: 0.025,
+        duration: 0.45,
         ease: "power4.inOut",
       });
     }
 
-    el._tl.play();
+    el.timeline.play();
   };
-  // hoverout animation
+
+  // Hover Out
   const handleHoverOut = (e) => {
     const el = e.currentTarget;
 
-    if (el._tl) {
-      el._tl.reverse();
+    if (el.timeline) {
+      el.timeline.reverse();
     }
   };
 
-
-   return (
+  return (
     <div
-      className="row inner-wrapper select-none leading-[3vw] h-7 xl:h-14 lg:h-10 md:h-10 overflow-hidden flex flex-col translate-y-0"
+      ref={wrapper}
+      className="overflow-hidden select-none"
       onMouseEnter={handleHoverIn}
       onMouseLeave={handleHoverOut}
     >
-      <ul className="relative">
-        {/* Main Link */}
-        <li className="text-3xl lg:text-[3vw] md:text-5xl tracking-tighter uppercase">
+      <ul className="relative leading-none">
+        {/* First Text */}
+        <li className="text-3xl md:text-5xl lg:text-[3vw] uppercase tracking-tight">
           <a
             href={Link}
-            aria-label={label}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={label}
           >
-            <span className="split">{name}</span>
+            <span className="split inline-block">{name}</span>
           </a>
         </li>
 
-        {/* Animated Copy */}
+        {/* Second Text */}
         <li
           aria-hidden="true"
-          className="absolute left-0 top-full text-3xl lg:text-[3vw] md:text-5xl leading-none tracking-tighter uppercase"
+          className="absolute left-0 top-full text-3xl md:text-5xl lg:text-[3vw] uppercase tracking-tight"
         >
           <a
             href={Link}
             target="_blank"
             rel="noopener noreferrer"
-            tabIndex="-1"
+            tabIndex={-1}
           >
-            <span className="split">{name}</span>
+            <span className="split inline-block">{name}</span>
           </a>
         </li>
       </ul>
@@ -80,4 +95,4 @@ const Sociallink = ({ name, Link , label }) => {
   );
 };
 
-export default Sociallink
+export default Sociallink;

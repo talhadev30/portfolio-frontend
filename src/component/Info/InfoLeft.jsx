@@ -8,10 +8,8 @@ const InfoLeft = () => {
       </h2>
 
       <p className="text-sm leading-relaxed text-zinc-300 py-5 md:text-2xl lg:text-sm 2xl:text-lg">
-        I specialize in building modern, responsive, and user-friendly web applications using React.js, JavaScript, Tailwind CSS, Node.js, Express.js, PHP, and other modern technologies. My focus is on creating digital experiences that are visually appealing, high-performing, and optimized for both users and businesses.
-
-        I enjoy transforming ideas into functional web solutions, whether it's a portfolio website, business platform, e-commerce store, or custom web application. Through continuous learning and hands-on development, I strive to write clean, maintainable code and deliver high-quality results.
-      </p>
+        I am a passionate Full Stack Web Developer with a strong interest in creating modern, responsive, and high-performance web applications. I work with React.js, JavaScript, Tailwind CSS, Node.js, Express.js, PHP, and MySQL to develop scalable, secure, and user-focused digital solutions. I value clean, maintainable code, intuitive user experiences, and continuous learning. By staying up to date with modern technologies and best practices, I strive to build reliable applications that deliver exceptional performance and long-term value.
+</p>
     </div>
   );
 };

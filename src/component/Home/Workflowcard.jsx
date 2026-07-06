@@ -27,7 +27,7 @@ const Workflowcard = (props) => {
         const tl = gsap.timeline()
 
         tl.to(Cardref.current, {
-            yPercent: -30
+            yPercent: -38
         }, "smae")
         tl.to(Textref.current, {
             opacity: 1,
