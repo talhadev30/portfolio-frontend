@@ -14,7 +14,7 @@ const workflowData = [
   },
   {
     numbers: 2,
-    title: "Frontend Development",
+    title: "Frontend",
     color: "crimson",
     zindex: 7,
     top: "13.5rem",
@@ -27,7 +27,7 @@ const workflowData = [
   },
   {
     numbers: 3,
-    title: "Backend Development",
+    title: "Backend",
     color: "royalblue",
     zindex: 8,
     top: "26rem",
@@ -53,7 +53,7 @@ const workflowData = [
   },
   {
     numbers: 5,
-    title: "Deployment",
+    title: "Deploy",
     color: "green",
     zindex: 10,
     top: "51rem",
