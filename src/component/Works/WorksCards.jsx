@@ -50,7 +50,7 @@ const WorksCards = () => {
                     </h1>
                 </div>
             </div>
-            <div className='relative'><StickyCard img={"/product1.png"} alt={"Restaurant Website"} ProductName={"headphone"} />
+            <div className='relative'><StickyCard img={"/project1.png"} alt={"Banking-System"} ProductName={"headphone"} link="https://talha-banking-system.vercel.app/" />
                 <StickyCard img={"/product2.png"} alt={"E-Commerce Website"} ProductName={"hand cream"} />
                 <StickyCard img={"/product3.png"} alt={"School Management System"} ProductName={"Mobile phone"} />
             </div>

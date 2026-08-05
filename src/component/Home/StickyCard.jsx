@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const StickyCard = (props) => {
   return (
@@ -11,7 +12,7 @@ const StickyCard = (props) => {
             <button className='py-0.5 px-2 rounded-2xl border'>Animations</button>
           </div>
           <div>
-            <h4 className='effect relative whitespace-nowrap uppercase font-[League] text-6xl leading-10 md:text-[9rem] lg:text-[9rem] tracking-tighter md:leading-35 lg:leading-35'>{props.ProductName}</h4>
+            <Link to={props.link} className='effect relative whitespace-nowrap uppercase font-[League] text-6xl leading-10 md:text-[9rem] lg:text-[9rem] tracking-tighter md:leading-35 lg:leading-35'>{props.ProductName}</Link>
           </div>
         </div>
       </div>
