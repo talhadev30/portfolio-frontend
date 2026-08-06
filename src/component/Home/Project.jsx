@@ -44,7 +44,7 @@ const Project = () => {
     <Projecttext text1={"Latest"} text2={"project"} />
 
     <div className='relative'>
-      <StickyCard img={"/product1.png"} alt={"Restaurant Website"} ProductName={"E-Commerce Store"} />
+      <StickyCard img={"/project1.png"} alt={"Banking System"} ProductName={"Banking System"} />
       <StickyCard img={"/product2.png"} alt={"E-Commerce Website"} ProductName={"Restaurant Website"} />
       <StickyCard img={"/product3.png"} alt={"School Management System"} ProductName={"School Management System"} />
     </div>
