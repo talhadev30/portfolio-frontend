@@ -34,7 +34,7 @@ const FooterCenter = () => {
                                 rel="noopener noreferrer">instagram</a></li>
                             <li className='hover:text-black/60'><a href="https://www.facebook.com/profile.php?id=61590847734134" aria-label="facebook Profile" target="_blank"
                                 rel="noopener noreferrer">facebook</a></li>
-                            <li className='hover:text-black/60'><a href="https://github.com/talha2343" aria-label="github Profile" target="_blank"
+                            <li className='hover:text-black/60'><a href="https://github.com/talhadev30" aria-label="github Profile" target="_blank"
                                 rel="noopener noreferrer">github</a></li>
                         </ul>
                     </div>

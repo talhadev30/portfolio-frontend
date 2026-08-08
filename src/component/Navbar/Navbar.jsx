@@ -124,7 +124,7 @@ const Navbar = (props) => {
             <Sociallink name="facebook" label='facebook profile' Link="https://www.facebook.com/profile.php?id=61589720709211" />
             <Sociallink name="instagram" label='instagram profile' Link="https://www.instagram.com/talha.dev30/" />
             <Sociallink name="linkedin" label='linkdin profile' Link="https://www.linkedin.com/in/m-talha-salman-66832839b" />
-            <Sociallink name="github" label='github profile' Link="https://www.github.com/talha2343" />
+            <Sociallink name="github" label='github profile' Link="https://www.github.com/talhadev30" />
           </div>
         </div>
       </div>
