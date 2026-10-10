@@ -99,7 +99,7 @@ const Navbar = (props) => {
   return (
     <>
       <nav className='h-14 w-full px-5 lg:px-20 flex font-[League] items-center py-10 justify-between z-40 pointer-coarse: fixed top-0 left-0'>
-        <h1 className='text-3xl font-medium hover:text-zz'>Talha</h1>
+        <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Talha Salman Home" className='text-3xl font-medium hover:text-zz'>Talha</Link>
         <div className='flex items-center  justify-center'>
           <div ref={Buttonref} className='flex items-center justify-center'>
             <Cvbutton />

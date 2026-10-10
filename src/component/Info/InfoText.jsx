@@ -25,9 +25,10 @@ const InfoText = (props) => {
   
       return () => ctx.revert();
     }, []);
+  const Tag = props.as || "h2";
   return (
        <div className='w-max overflow-hidden text-center'>
-          <h2 ref={HeroText} className='text-nowrap px-3 text-8xl sm:text-7xl md:text-9xl lg:text-[14rem] 2xl:text-[16rem] tracking-tighter font-[League] uppercase lg:text-center'>{props.text}</h2>
+          <Tag ref={HeroText} className='text-nowrap px-3 text-8xl sm:text-7xl md:text-9xl lg:text-[14rem] 2xl:text-[16rem] tracking-tighter font-[League] uppercase lg:text-center'>{props.text}</Tag>
         </div>
   )
 }

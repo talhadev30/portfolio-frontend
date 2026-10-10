@@ -81,8 +81,8 @@ const Firsetinfo = () => {
     >
       <div className="h-full opacity-80 lg:w-2/3 w-full gap-6 px-2">
         <div className="flex flex-col  items-center justify-center mb-20 lg:pt-22 pt-50">
-          <InfoText text="i'm talha" />
-          <InfoText text="web developer" />
+          <InfoText as="h1" text="i'm talha" />
+          <InfoText as="h2" text="web developer" />
         </div>
         <div className="flex flex-col gap-10 items-center justify-between lg:flex-row px-2">
           <p ref={pra1} className="w-full lg:w-50 lg:text-xs md:text-2xl text-xl">
@@ -97,7 +97,7 @@ const Firsetinfo = () => {
             <img
               ref={imgref}
               src="./my.png"
-              alt="Talha Developer"
+              alt="Talha Salman Full Stack Web Developer"
               className="w-full h-auto object-cover rounded-3xl"
             />
           </div>

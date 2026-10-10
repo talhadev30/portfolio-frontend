@@ -9,20 +9,21 @@ const DIST = path.resolve('dist');
 
 const ROUTES_METADATA = {
   '/': {
-    title: 'Talha Salman | Full Stack Web Developer in Karachi, Pakistan | MERN Stack Specialist',
-    description: 'Talha Salman is a Full Stack Web Developer in Karachi, Pakistan building high-performance React, Node.js, Express, and MongoDB web applications. Explore my portfolio and projects.',
+    title: 'Talha Salman | Full Stack Web Developer & MERN Specialist',
+    description: 'Talha Salman is a professional Full Stack Web Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance digital web applications.',
     keywords: 'Talha Salman, Full Stack Developer, Web Developer Karachi, React Developer Pakistan, MERN Stack Developer, Node.js Developer, Portfolio, Tailwind CSS, Frontend Developer, Backend Developer, REST API Developer, JavaScript Developer, Freelance Web Developer',
     canonical: 'https://talhaportfolio.dpdns.org/',
-    ogTitle: 'Talha Salman | Full Stack Web Developer in Karachi, Pakistan',
-    ogDescription: 'Explore my React, Node.js, and MongoDB web development projects, technical skills, and experience as a Full Stack Developer.',
+    ogTitle: 'Talha Salman | Full Stack Web Developer & MERN Specialist',
+    ogDescription: 'Talha Salman is a professional Full Stack Web Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance digital web applications.',
     ogType: 'website',
     fallbackHtml: `
     <main data-fallback>
-      <h1>Talha Salman | Full Stack Web Developer in Karachi, Pakistan</h1>
+      <h1>Talha Salman | Full Stack Web Developer & MERN Specialist</h1>
       <p>I build fast, responsive, and SEO-optimized web applications with React, JavaScript, Node.js, Express.js, MongoDB, and Tailwind CSS.</p>
-      <h2>Full Stack Technical Skills</h2>
-      <p>React.js, JavaScript (ES6+), Node.js, Express.js, MongoDB, Tailwind CSS, PHP, HTML5, CSS3, REST APIs, Git &amp; GitHub.</p>
-      <h2>Featured Web Projects</h2>
+      <h2>Full Stack Web Development & Digital Engineering</h2>
+      <h3>Custom Web Applications & Modern UI/UX Architecture</h3>
+      <p>Specializing in modern, fast, and SEO-friendly digital web applications with clean modular code, fast loading speeds, and accessibility at its core.</p>
+      <h2>Featured Web Projects & Case Studies</h2>
       <ul>
         <li><a href="https://talha-banking-system.vercel.app/" target="_blank" rel="noopener noreferrer">Online Banking System</a> - Full stack React and Node.js banking web app with secure transactions.</li>
         <li><a href="https://talhaportfolio.dpdns.org/work">Modern Restaurant &amp; Food Ordering Web App</a> - Responsive food ordering and restaurant showcase platform.</li>
@@ -36,27 +37,29 @@ const ROUTES_METADATA = {
         <li><strong>Testing</strong>: Cross-device testing, responsive validation, and bug fixing.</li>
         <li><strong>Deploy</strong>: Production deployment, SEO optimization, and ongoing support.</li>
       </ol>
-      <h2>Contact &amp; Connect</h2>
+      <h2>Quick Navigation & Connect</h2>
       <p>
-        <a href="https://github.com/talhadev30" target="_blank" rel="noopener noreferrer">Talha Salman on GitHub</a> |
-        <a href="https://www.linkedin.com/in/m-talha-salman-66832839b" target="_blank" rel="noopener noreferrer">Talha Salman on LinkedIn</a> |
+        <a href="https://talhaportfolio.dpdns.org/">Home</a> |
+        <a href="https://talhaportfolio.dpdns.org/work">Featured Works</a> |
+        <a href="https://talhaportfolio.dpdns.org/info">About & Skills</a> |
         <a href="https://talhaportfolio.dpdns.org/contact">Contact Talha Salman</a>
       </p>
     </main>`
   },
   '/work': {
-    title: 'Featured Web Development Projects | Talha Salman Portfolio',
+    title: 'Featured Web Development Projects & Case Studies | Talha Salman',
     description: 'Explore web development projects by Talha Salman: Banking System, Restaurant Web Apps, and School Portals built with React, Node.js, Express, and Tailwind CSS.',
     keywords: 'Talha Salman Projects, Web Development Portfolio, React Projects, Node.js Applications, Banking System Web App, MERN Stack Projects, Frontend Portfolio, Web Developer Karachi',
     canonical: 'https://talhaportfolio.dpdns.org/work',
-    ogTitle: 'Featured Web Development Projects | Talha Salman',
-    ogDescription: 'Discover full-stack web applications and interactive projects built with React, Node.js, and MongoDB.',
+    ogTitle: 'Featured Web Development Projects & Case Studies | Talha Salman',
+    ogDescription: 'Explore web development projects by Talha Salman: Banking System, Restaurant Web Apps, and School Portals built with React, Node.js, Express, and Tailwind CSS.',
     ogType: 'website',
     fallbackHtml: `
     <main data-fallback>
       <h1>Featured Web Development Projects &amp; Case Studies</h1>
       <p>A curated portfolio of modern web applications, full-stack systems, and responsive digital experiences built using React, Node.js, Express, MongoDB, and Tailwind CSS.</p>
-      <h2>Featured Applications</h2>
+      <h2>Full-Stack Case Studies & Web Applications</h2>
+      <h3>Production-Ready Solutions Built with React, Node.js & Modern Tools</h3>
       <article>
         <h3>Online Banking System Web Application</h3>
         <p>Full stack banking application built with React, Node.js, Express, and secure authentication. Features real-time transactions, account transfers, and dashboard analytics.</p>
@@ -71,21 +74,28 @@ const ROUTES_METADATA = {
         <p>Comprehensive educational institution management portal for managing student records, classes, and administrative workflows.</p>
       </article>
       <h2>Start a Project</h2>
-      <p><a href="https://talhaportfolio.dpdns.org/contact">Get in touch to discuss your web application requirements</a>.</p>
+      <p>
+        <a href="https://talhaportfolio.dpdns.org/">Home</a> |
+        <a href="https://talhaportfolio.dpdns.org/info">About & Skills</a> |
+        <a href="https://talhaportfolio.dpdns.org/contact">Contact Talha Salman</a>
+      </p>
     </main>`
   },
   '/info': {
-    title: 'About Talha Salman | Full Stack Web Developer Skills & Journey',
+    title: 'About Talha Salman | Full Stack Web Developer & Software Engineer',
     description: 'Learn about Talha Salman, a Full Stack Developer in Karachi, Pakistan. Explore technical skills in React, Node.js, Express, MongoDB, PHP, and modern web development.',
     keywords: 'About Talha Salman, Full Stack Developer Karachi, Web Developer Skills, React Developer Pakistan, MERN Stack Skills, JavaScript Developer, Backend Developer Node.js',
     canonical: 'https://talhaportfolio.dpdns.org/info',
-    ogTitle: 'About Talha Salman | Full Stack Web Developer',
-    ogDescription: 'Technical skills, experience, and workflow of Talha Salman - Full Stack Developer based in Karachi, Pakistan.',
+    ogTitle: 'About Talha Salman | Full Stack Web Developer & Software Engineer',
+    ogDescription: 'Learn about Talha Salman, a Full Stack Developer in Karachi, Pakistan. Explore technical skills in React, Node.js, Express, MongoDB, PHP, and modern web development.',
     ogType: 'profile',
     fallbackHtml: `
     <main data-fallback>
-      <h1>About Talha Salman | Full Stack Web Developer</h1>
+      <h1>About Talha Salman | Full Stack Web Developer & Software Engineer</h1>
       <p>I am a passionate Full Stack Web Developer based in Karachi, Pakistan, specializing in modern frontend and backend web technologies. I craft fast, responsive, and secure web applications with React, Node.js, Express, MongoDB, and Tailwind CSS.</p>
+      <h2>A Little Bit About Me</h2>
+      <h3>Full Stack Developer Journey & Philosophy</h3>
+      <p>I prioritize writing maintainable code, adhering to clean architecture, optimizing web performance for search engine rankings, and ensuring seamless cross-device compatibility.</p>
       <h2>Technical Skills &amp; Stack</h2>
       <h3>Frontend Development</h3>
       <p>React.js, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, GSAP Animations, Responsive Web Design.</p>
@@ -97,6 +107,8 @@ const ROUTES_METADATA = {
       <p>Git, GitHub, VS Code, Postman, Vite, Vercel.</p>
       <h2>Contact &amp; Profiles</h2>
       <p>
+        <a href="https://talhaportfolio.dpdns.org/">Home</a> |
+        <a href="https://talhaportfolio.dpdns.org/work">Projects</a> |
         <a href="https://github.com/talhadev30" target="_blank" rel="noopener noreferrer">GitHub</a> |
         <a href="https://www.linkedin.com/in/m-talha-salman-66832839b" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
         <a href="https://talhaportfolio.dpdns.org/contact">Hire Me</a>
@@ -104,21 +116,29 @@ const ROUTES_METADATA = {
     </main>`
   },
   '/contact': {
-    title: 'Contact Talha Salman | Hire Full Stack Web Developer | Karachi & Remote',
-    description: 'Contact Talha Salman for web development projects, freelance contracts, and engineering roles. Available for hire in Karachi, Pakistan and remote worldwide.',
+    title: 'Contact Talha Salman | Hire Full Stack Web Developer',
+    description: 'Get in touch with Talha Salman for custom web development, React and Node.js applications, freelance contracts, and software engineering opportunities.',
     keywords: 'Contact Talha Salman, Hire Web Developer Karachi, Hire Full Stack Developer, Freelance React Developer Pakistan, MERN Developer Hire, Web Developer Contact',
     canonical: 'https://talhaportfolio.dpdns.org/contact',
-    ogTitle: 'Contact Talha Salman | Hire a Full Stack Web Developer',
-    ogDescription: 'Get in touch with Talha Salman for freelance web development projects and collaborative opportunities.',
+    ogTitle: 'Contact Talha Salman | Hire Full Stack Web Developer',
+    ogDescription: 'Get in touch with Talha Salman for custom web development, React and Node.js applications, freelance contracts, and software engineering opportunities.',
     ogType: 'website',
     fallbackHtml: `
     <main data-fallback>
       <h1>Let's Create Something Great Together</h1>
-      <h2>Hire a Full Stack Web Developer in Karachi, Pakistan or Remote Worldwide</h2>
+      <h2>Hire a Full Stack Web Developer & Software Engineer</h2>
+      <h3>Available for Freelance Contracts, Remote Roles & Technical Consultations</h3>
       <p>Available for freelance contracts, full-time web development roles, and custom web application projects.</p>
       <p>Location: Karachi, Pakistan (Available for Worldwide Remote Work)</p>
       <p>Expertise: Full Stack MERN Development, React Frontends, Node.js REST APIs.</p>
-      <p>Connect with me on <a href="https://www.linkedin.com/in/m-talha-salman-66832839b" target="_blank" rel="noopener noreferrer">LinkedIn</a> or check my code on <a href="https://github.com/talhadev30" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+      <h2>Explore Portfolio &amp; Connect</h2>
+      <p>
+        <a href="https://talhaportfolio.dpdns.org/">Home</a> |
+        <a href="https://talhaportfolio.dpdns.org/work">Featured Works</a> |
+        <a href="https://talhaportfolio.dpdns.org/info">About Talha</a> |
+        <a href="https://www.linkedin.com/in/m-talha-salman-66832839b" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+        <a href="https://github.com/talhadev30" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
     </main>`
   }
 };

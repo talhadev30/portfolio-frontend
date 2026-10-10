@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,18 +82,21 @@ const Thirdinfo = () => {
   return (
     <section ref={containerref} className="w-full bg-black text-white py-24 px-6 md:px-19">
       <div className="mb-20 lg:w-1/2">
-        <h2 ref={textref} className="uppercase mb-5 font-[League] text-6xl md:text-8xl lg:text-7xl tracking-tighter 2xl:text-8xl">
+        <h2 ref={textref} className="uppercase mb-3 font-[League] text-6xl md:text-8xl lg:text-7xl tracking-tighter 2xl:text-8xl">
           TECHNOLOGIES <br />
           I WORK WITH
         </h2>
-        <p ref={pararef} className="text-sm leading-relaxed text-zinc-300 py-5 md:text-2xl lg:text-sm 2xl:text-lg">  
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-4">
+          Frontend, Backend, Database & Engineering Tooling
+        </h3>
+        <p ref={pararef} className="text-sm leading-relaxed text-zinc-300 py-3 md:text-xl lg:text-sm 2xl:text-base">  
           As a Full Stack Developer, I craft modern web applications that combine
           intuitive user experiences with scalable backend architecture. From
           responsive React interfaces to powerful APIs built with Node.js and PHP,
           I focus on creating fast, secure, and high-performance digital solutions.
           My goal is to transform ideas into impactful products that deliver real
-          value to users and businesses.</p>
-
+          value to users and businesses.
+        </p>
       </div>
   
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -135,6 +139,34 @@ const Thirdinfo = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Internal Links Navigation */}
+      <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm uppercase tracking-wider text-zinc-400">
+        <span>Explore Next:</span>
+        <div className="flex flex-wrap gap-6">
+          <Link
+            to="/work"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="hover:text-white underline underline-offset-4"
+          >
+            See Projects Built With These Technologies
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="hover:text-white underline underline-offset-4"
+          >
+            Hire Me for Full Stack Development
+          </Link>
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="hover:text-white underline underline-offset-4"
+          >
+            Back to Home
+          </Link>
+        </div>
       </div>
     </section>
   );

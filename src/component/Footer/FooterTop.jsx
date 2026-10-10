@@ -46,8 +46,8 @@ const FooterTop = () => {
             <div className='flex flex-col items-start justify-center font-[League]'>
                 <h4 className='text-4xl uppercase'>ready to work together ?</h4>
                 <div onMouseEnter={handleHoverIn} onMouseLeave={handleHoverOut} className='flex flex-col items-start justify-start md:h-32 lg:h-40 h-20 overflow-hidden'>
-                    <Link to="/contect" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='split text-7xl md:text-9xl lg:text-[11rem] md:leading-40 lg:leading-40 leading-20 uppercase tracking-tighter'>drop me a line</Link>
-                    <Link to="/contect" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='split text-7xl md:text-9xl lg:text-[11rem] md:leading-40 lg:leading-40 leading-20 uppercase tracking-tighter'>drop me a line</Link>
+                    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Contact Talha Salman" className='split text-7xl md:text-9xl lg:text-[11rem] md:leading-40 lg:leading-40 leading-20 uppercase tracking-tighter'>drop me a line</Link>
+                    <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Contact Talha Salman" className='split text-7xl md:text-9xl lg:text-[11rem] md:leading-40 lg:leading-40 leading-20 uppercase tracking-tighter'>drop me a line</Link>
                 </div>
             </div>
             <div>
