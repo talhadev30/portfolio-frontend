@@ -12,7 +12,7 @@ const Counter = () => {
         }
         return prev + 1
     })
-   },50)
+   },30)
    return()=> clearInterval(intevarl)
   }, []);
   return (

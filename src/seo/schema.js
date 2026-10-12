@@ -26,7 +26,7 @@ export const getJsonLdForRoute = (routePath) => {
     "@id": personId,
     name: OWNER.name,
     url: `${SITE_URL}/`,
-    image: `${SITE_URL}/preview.png`,
+    image: `${SITE_URL}/preview.webp`,
     jobTitle: OWNER.shortRole,
     description: OWNER.bio,
     address: {

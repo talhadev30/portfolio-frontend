@@ -6,19 +6,19 @@ const images = ['product1', 'product2', 'product3', 'project1', 'my', 'talhacv']
 
 console.log('Generating WebP versions...');
 for (const name of images) {
-  const src = `public/${name}.png`;
+  const src = `public/${name}.webp`;
   const dest = `public/${name}.webp`;
   console.log(`Converting ${src} -> ${dest}`);
   execSync(`npx sharp-cli -i ${src} -o ${dest} -q 82`, { stdio: 'inherit' });
 }
 
-console.log('Converting preview.png -> preview.webp (1200x630)...');
-execSync(`npx sharp-cli -i public/preview.png -o public/preview.webp resize 1200 630 -q 85`, { stdio: 'inherit' });
+console.log('Converting preview.webp -> preview.webp (1200x630)...');
+execSync(`npx sharp-cli -i public/preview.webp -o public/preview.webp resize 1200 630 -q 85`, { stdio: 'inherit' });
 
-console.log('Optimizing fallback PNGs with palette compression...');
+console.log('Optimizing fallback webps with palette compression...');
 for (const name of images) {
-  const src = `public/${name}.png`;
-  const tmp = `public/${name}_opt.png`;
+  const src = `public/${name}.webp`;
+  const tmp = `public/${name}_opt.webp`;
   console.log(`Optimizing ${src}`);
   execSync(`npx sharp-cli -i ${src} -o ${tmp} --palette`, { stdio: 'inherit' });
   if (fs.existsSync(tmp)) {
@@ -27,11 +27,11 @@ for (const name of images) {
   }
 }
 
-console.log('Optimizing preview.png (1200x630)...');
-const prevTmp = `public/preview_opt.png`;
-execSync(`npx sharp-cli -i public/preview.png -o ${prevTmp} resize 1200 630 --palette`, { stdio: 'inherit' });
+console.log('Optimizing preview.webp (1200x630)...');
+const prevTmp = `public/preview_opt.webp`;
+execSync(`npx sharp-cli -i public/preview.webp -o ${prevTmp} resize 1200 630 --palette`, { stdio: 'inherit' });
 if (fs.existsSync(prevTmp)) {
-  fs.copyFileSync(prevTmp, 'public/preview.png');
+  fs.copyFileSync(prevTmp, 'public/preview.webp');
   fs.unlinkSync(prevTmp);
 }
 

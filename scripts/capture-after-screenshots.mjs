@@ -38,7 +38,7 @@ async function capture() {
         // Wait for loader curtain transition
         await new Promise((resolve) => setTimeout(resolve, 2500));
 
-        const dest = path.join(outDir, `${r.name}-${vp.suffix}.png`);
+        const dest = path.join(outDir, `${r.name}-${vp.suffix}.webp`);
         await page.screenshot({ path: dest, fullPage: false });
         console.log(`Saved screenshot: ${dest}`);
       } catch (err) {

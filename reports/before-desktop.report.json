@@ -798,7 +798,7 @@
             "entity": "dpdns.org"
           },
           {
-            "url": "https://talhaportfolio.dpdns.org/project1.png",
+            "url": "https://talhaportfolio.dpdns.org/project1.webp",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -809,14 +809,14 @@
             "transferSize": 431774,
             "resourceSize": 431395,
             "statusCode": 200,
-            "mimeType": "image/png",
+            "mimeType": "image/webp",
             "resourceType": "Image",
             "priority": "Low",
             "experimentalFromMainFrame": true,
             "entity": "dpdns.org"
           },
           {
-            "url": "https://talhaportfolio.dpdns.org/product2.png",
+            "url": "https://talhaportfolio.dpdns.org/product2.webp",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -827,14 +827,14 @@
             "transferSize": 1363028,
             "resourceSize": 1362128,
             "statusCode": 200,
-            "mimeType": "image/png",
+            "mimeType": "image/webp",
             "resourceType": "Image",
             "priority": "Low",
             "experimentalFromMainFrame": true,
             "entity": "dpdns.org"
           },
           {
-            "url": "https://talhaportfolio.dpdns.org/product3.png",
+            "url": "https://talhaportfolio.dpdns.org/product3.webp",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -845,7 +845,7 @@
             "transferSize": 1607925,
             "resourceSize": 1606844,
             "statusCode": 200,
-            "mimeType": "image/png",
+            "mimeType": "image/webp",
             "resourceType": "Image",
             "priority": "Low",
             "experimentalFromMainFrame": true,
@@ -2961,15 +2961,15 @@
         ],
         "items": [
           {
-            "url": "https://talhaportfolio.dpdns.org/product3.png",
+            "url": "https://talhaportfolio.dpdns.org/product3.webp",
             "totalBytes": 1607925
           },
           {
-            "url": "https://talhaportfolio.dpdns.org/product2.png",
+            "url": "https://talhaportfolio.dpdns.org/product2.webp",
             "totalBytes": 1363028
           },
           {
-            "url": "https://talhaportfolio.dpdns.org/project1.png",
+            "url": "https://talhaportfolio.dpdns.org/project1.webp",
             "totalBytes": 431774
           },
           {
@@ -4488,10 +4488,10 @@
                 "width": 1755,
                 "height": 1222
               },
-              "snippet": "<img alt=\"School Management System\" class=\"bg-cover w-full h-full object-cover\" src=\"/product3.png\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
+              "snippet": "<img alt=\"School Management System\" class=\"bg-cover w-full h-full object-cover\" src=\"/product3.webp\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
               "nodeLabel": "School Management System"
             },
-            "url": "https://talhaportfolio.dpdns.org/product3.png",
+            "url": "https://talhaportfolio.dpdns.org/product3.webp",
             "totalBytes": 1606844,
             "wastedBytes": 1465649,
             "subItems": {
@@ -4518,10 +4518,10 @@
                 "width": 1755,
                 "height": 1222
               },
-              "snippet": "<img alt=\"E-Commerce Website\" class=\"bg-cover w-full h-full object-cover\" src=\"/product2.png\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
+              "snippet": "<img alt=\"E-Commerce Website\" class=\"bg-cover w-full h-full object-cover\" src=\"/product2.webp\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
               "nodeLabel": "E-Commerce Website"
             },
-            "url": "https://talhaportfolio.dpdns.org/product2.png",
+            "url": "https://talhaportfolio.dpdns.org/product2.webp",
             "totalBytes": 1362128,
             "wastedBytes": 1220933,
             "subItems": {
@@ -4548,10 +4548,10 @@
                 "width": 1755,
                 "height": 1222
               },
-              "snippet": "<img alt=\"Banking System\" class=\"bg-cover w-full h-full object-cover\" src=\"/project1.png\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
+              "snippet": "<img alt=\"Banking System\" class=\"bg-cover w-full h-full object-cover\" src=\"/project1.webp\" style=\"translate: none; rotate: none; scale: none; transform: scale(1.3, 1.3);\">",
               "nodeLabel": "Banking System"
             },
-            "url": "https://talhaportfolio.dpdns.org/project1.png",
+            "url": "https://talhaportfolio.dpdns.org/project1.webp",
             "totalBytes": 431395,
             "wastedBytes": 164648,
             "subItems": {

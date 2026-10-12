@@ -16,9 +16,9 @@ const WorksCards = () => {
                     </h1>
                 </div>
             </div>
-            <div className='relative'><StickyCard img={"/project1.png"} alt={"Banking System"} ProductName={"Banking System"} link="https://talha-banking-system.vercel.app/" />
-                <StickyCard img={"/product2.png"} alt={"Restaurant Website"} ProductName={"Restaurant Website"} />
-                <StickyCard img={"/product3.png"} alt={"School Management System"} ProductName={"School Management System"} />
+            <div className='relative'><StickyCard img={"/project1.webp"} alt={"Banking System"} ProductName={"Banking System"} link="https://talha-banking-system.vercel.app/" />
+                <StickyCard img={"/product2.webp"} alt={"Restaurant Website"} ProductName={"Restaurant Website"} />
+                <StickyCard img={"/product3.webp"} alt={"School Management System"} ProductName={"School Management System"} />
             </div>
         </div>
     )

@@ -50,7 +50,7 @@ export const PROJECTS = [
     description:
       "A secure, responsive banking portal featuring real-time account balances, fund transfers, transaction histories, and protected user authentication flows. Built with scalable REST APIs and modern React state management.",
     liveLink: "https://talha-banking-system.vercel.app/",
-    image: "/project1.png",
+    image: "/project1.webp",
     alt: "Online Banking System Web Application Screenshot",
   },
   {
@@ -61,7 +61,7 @@ export const PROJECTS = [
     description:
       "An engaging web platform for food ordering and culinary showcases. Features dynamic category filtering, interactive shopping cart simulation, smooth page animations, and an optimized mobile layout.",
     liveLink: null,
-    image: "/product2.png",
+    image: "/product2.webp",
     alt: "Modern Restaurant and Food Ordering Web Application Screenshot",
   },
   {
@@ -72,7 +72,7 @@ export const PROJECTS = [
     description:
       "A comprehensive institutional management system with role-based dashboards for students, teachers, and administrators. Supports enrollment tracking, attendance logging, and academic performance reporting.",
     liveLink: null,
-    image: "/product3.png",
+    image: "/product3.webp",
     alt: "School Management System Web Portal Screenshot",
   },
 ];

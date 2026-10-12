@@ -27,7 +27,7 @@ useGSAP(() => {
 
     tl.to(paths, {
       strokeDashoffset: 0,
-      duration: 0.9,
+      duration: 2,
       ease: "power3.inOut",
       fill: "#fff",
       stagger: 0.12,

@@ -7,8 +7,8 @@ const StickyCard = (props) => {
   return (
     <div className="h-screen sticky top-0 w-full overflow-hidden">
       <picture className="w-full h-full">
-        {props.img && props.img.endsWith('.png') && (
-          <source srcSet={props.img.replace(/\.png$/, '.webp')} type="image/webp" />
+        {props.img && props.img.endsWith('.webp') && (
+          <source srcSet={props.img.replace(/\.webp$/, '.webp')} type="image/webp" />
         )}
         <img
           src={props.img}

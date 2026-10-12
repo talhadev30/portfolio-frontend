@@ -6,7 +6,7 @@
  */
 
 export const SITE_URL = "https://talhaportfolio.dpdns.org";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/preview.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/preview.webp`;
 export const SITE_NAME = "Talha Salman Portfolio";
 export const GOOGLE_VERIFICATION = "jpenjXttM1-wCHaXoCllG5oVsuszH_iX45n9h1jMCh0";
 
