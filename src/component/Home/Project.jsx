@@ -50,17 +50,16 @@ const Project = () => {
     </div>
 
     <div className="flex items-center justify-center font-[League] ">
-      <button className="btns relative text-center my-15 py-1 px-3 border text-[18px] rounded-3xl overflow-hidden">
-        <Link
-          to="./work"
-          className="z-20 relative uppercase"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          see all work
-        </Link>
-      </button>
+      <Link
+        to="/work"
+        role="button"
+        className="btns inline-block z-20 relative uppercase text-center my-15 py-1 px-4 border text-[18px] rounded-3xl overflow-hidden hover:text-black hover:bg-white transition-colors"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
+        see all work
+      </Link>
     </div>
 
   </div>

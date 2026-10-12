@@ -1,45 +1,9 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap'
-import { SplitText } from 'gsap/SplitText'
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
+import useRollingLink from '../../hooks/useRollingLink';
 
 const FooterTop = () => {
-
-    // gsap animation
-    useGSAP(() => {
-        let ctx = gsap.context(() => {
-            document.querySelectorAll(".split").forEach((el) => {
-                new SplitText(el, { type: "chars", charsClass: "chars" });
-            });
-        });
-        return () => ctx.revert();
-    });
-    // hover animation
-    const handleHoverIn = (e) => {
-        const el = e.currentTarget;
-        const chars = el.querySelectorAll(".chars");
-
-        if (!el._tl) {
-            el._tl = gsap.timeline({ paused: true });
-
-            el._tl.to(chars, {
-                yPercent: -100,
-                stagger: 0.02,
-                ease: "power4.inOut",
-            });
-        }
-
-        el._tl.play();
-    };
-    // hover out animation
-    const handleHoverOut = (e) => {
-        const el = e.currentTarget;
-
-        if (el._tl) {
-            el._tl.reverse();
-        }
-    };
+    const { handleHoverIn, handleHoverOut } = useRollingLink();
 
     return (
         <div className='flex md:flex-row lg:flex-row flex-col md:items-center lg:items-center items-start gap-6 md:gap-0 lg:gap-0 lg:justify-between md:justify-between h-60 w-full border-b-2'>

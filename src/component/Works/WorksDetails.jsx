@@ -1,38 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ExternalLink, Layers, ShieldCheck, Zap, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { PROJECTS } from "../../data/portfolioData";
 
 const WorksDetails = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const projectList = [
-    {
-      title: "Online Banking System",
-      category: "Full Stack Application",
-      tech: ["React.js", "Node.js", "Express", "Tailwind CSS", "JWT Auth"],
-      description:
-        "A secure, responsive banking portal featuring real-time account balances, fund transfers, transaction histories, and protected user authentication flows. Built with scalable REST APIs and modern React state management.",
-      liveLink: "https://talha-banking-system.vercel.app/",
-    },
-    {
-      title: "Restaurant & Food Ordering Platform",
-      category: "E-Commerce & Hospitality",
-      tech: ["React", "JavaScript (ES6+)", "Tailwind CSS", "GSAP Animations"],
-      description:
-        "An engaging web platform for food ordering and culinary showcases. Features dynamic category filtering, interactive shopping cart simulation, smooth page animations, and an optimized mobile layout.",
-      liveLink: null,
-    },
-    {
-      title: "School Management System Portal",
-      category: "Management Dashboard",
-      tech: ["React", "Node.js", "MySQL / MongoDB", "Express", "REST APIs"],
-      description:
-        "A comprehensive institutional management system with role-based dashboards for students, teachers, and administrators. Supports enrollment tracking, attendance logging, and academic performance reporting.",
-      liveLink: null,
-    },
-  ];
+  const projectList = PROJECTS;
 
   return (
     <section className="w-full bg-black text-white py-24 px-6 md:px-16 lg:px-20 border-t border-white/10">
