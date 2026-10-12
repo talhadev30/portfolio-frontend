@@ -24,12 +24,14 @@ const Projecttext = (props) => {
     );
   })
 
+  const Tag = props.as || "h2";
+
   return (
     <div ref={containerref} className='lg:p-20 p-5 overflow-hidden'>
-      <h3 ref={revelref} className='font-[League] tracking-tighter text-6xl md:text-[8rem] lg:text-[10rem] mb-10 lg:leading-[10vw] 2xl:leading-[8.5vw] uppercase'>
+      <Tag ref={revelref} className='font-[League] tracking-tighter text-6xl md:text-[8rem] lg:text-[10rem] mb-10 lg:leading-[10vw] 2xl:leading-[8.5vw] uppercase'>
         {props.text1}<br />
         {props.text2}
-      </h3>
+      </Tag>
     </div>
   )
 }

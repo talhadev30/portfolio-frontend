@@ -32,12 +32,12 @@ const Button = ({ img, name }) => {
             />
           </div>
 
-          <h3
+          <span
             className=" text-sm md:text-base font-semibold uppercase tracking-wider text-white/80 transition-all duration-300 group-hover:text-white
             "
           >
             {name}
-          </h3>
+          </span>
 
         </div>
 

@@ -3,28 +3,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
+import { SKILL_CATEGORIES } from "../../data/portfolioData";
+
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Thirdinfo = () => {
-  const skills = [
-    {
-      title: "Frontend",
-      items: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "Gsap", "Framer Motion"],
-    },
-    {
-      title: "Backend",
-      items: ["Node.js", "Express.js", "REST APIs", "JWT Auth", "PHP"],
-    },
-    {
-      title: "Database",
-      items: ["MongoDB", "SQL"],
-    },
-    {
-      title: "Tools",
-      items: ["Git", "GitHub", "Vs Code" , "Postman"],
-    },
-  ];
+  const skills = SKILL_CATEGORIES;
 
 
   const cardsRef = useRef([]);
@@ -86,9 +70,9 @@ const Thirdinfo = () => {
           TECHNOLOGIES <br />
           I WORK WITH
         </h2>
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-4">
+        <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-4">
           Frontend, Backend, Database & Engineering Tooling
-        </h3>
+        </p>
         <p ref={pararef} className="text-sm leading-relaxed text-zinc-300 py-3 md:text-xl lg:text-sm 2xl:text-base">  
           As a Full Stack Developer, I craft modern web applications that combine
           intuitive user experiences with scalable backend architecture. From

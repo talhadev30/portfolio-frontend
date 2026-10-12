@@ -18,9 +18,9 @@ const HomeOverview = () => {
           <h2 className="font-[League] text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter mt-2 mb-6">
             Full Stack Web Development & Digital Engineering
           </h2>
-          <h3 className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
             Crafting high-performance web applications, responsive user interfaces, and scalable backend architectures tailored for business growth.
-          </h3>
+          </p>
         </div>
 
         {/* Detailed SEO-rich Content Paragraphs (Over 180 words) */}

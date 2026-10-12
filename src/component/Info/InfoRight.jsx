@@ -66,12 +66,12 @@ const images2 = [
       <div className="lg:h-120 2xl:h-150 h-80 md:h-140 overflow-hidden flex items-center justify-center gap-4">
         <div ref={container1Ref} className="flex flex-col">
           {[...images1, ...images1, ...images1].map((img, i) => (
-            <img key={i} src={img.src} alt={img.alt} className="h-80 w-70 md:h-full md:w-96 2xl:h-2/2 object-cover mb-4" />
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" decoding="async" className="h-80 w-70 md:h-full md:w-96 2xl:h-2/2 object-cover mb-4" />
           ))}
         </div>
         <div ref={container2Ref} className="flex flex-col">
           {[...images2, ...images2, ...images2].map((img, i) => (
-            <img key={i} src={img.src} alt={img.alt} className="h-80 w-70 md:w-96 2xl:h-2/2 object-cover mb-4" />
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" decoding="async" className="h-80 w-70 md:w-96 2xl:h-2/2 object-cover mb-4" />
           ))}
         </div>
       </div>

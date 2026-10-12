@@ -1,43 +1,9 @@
 import React from 'react'
 import StickyCard from '../Home/StickyCard'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import { useEffect, useRef } from 'react'
-import Projecttext from '../Home/Projecttext'
-import { useGSAP } from '@gsap/react'
-import { SplitText } from 'gsap/all'
+import useSplitReveal from '../../hooks/useSplitReveal';
 
 const WorksCards = () => {
-
-    const HeroText = useRef(null)
-    const imageref = useRef(null)
-
-    useGSAP(() => {
-        gsap.registerPlugin(SplitText);
-        gsap.registerPlugin(ScrollTrigger);
-
-        const ctx = gsap.context(() => {
-            const split = new SplitText(HeroText.current, { type: "chars" });
-
-            gsap.from(split.chars, {
-                opacity: 0,
-                yPercent: 100,
-                ease: "sine.inOut",
-                stagger: {
-                    each: 0.02,
-                    from: "start"
-                },
-            });
-        });
-
-        gsap.from(imageref.current, {
-            opacity: 0,
-            ease: "power3.inOut",
-            duration: 1,
-        })
-
-        return () => ctx.revert();
-    }, []);
+    const HeroText = useSplitReveal();
 
     return (
         <div className="bg-black min-h-screen relative">

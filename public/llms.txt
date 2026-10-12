@@ -1,0 +1,22 @@
+# Talha Salman — Portfolio
+
+> Full Stack Web Developer & MERN Specialist based in Karachi, Pakistan.
+> Specializing in React, Node.js, Express, MongoDB, RESTful APIs, and modern web application development.
+
+## Core Information
+- Name: Talha Salman
+- Role: Full Stack Web Developer / Software Engineer
+- Location: Karachi, Pakistan (Available for Worldwide Remote Work)
+- GitHub: https://github.com/talhadev30
+- LinkedIn: https://www.linkedin.com/in/m-talha-salman-66832839b
+
+## Key Pages
+- Homepage: https://talhaportfolio.dpdns.org/
+- Featured Projects & Case Studies: https://talhaportfolio.dpdns.org/work
+- About & Technical Skills: https://talhaportfolio.dpdns.org/info
+- Contact & Freelance Inquiries: https://talhaportfolio.dpdns.org/contact
+
+## Featured Projects
+- Online Banking System: Full-stack React and Node.js banking web application with secure transactions. Live: https://talha-banking-system.vercel.app/
+- Restaurant & Food Ordering Platform: Responsive food ordering showcase with dynamic menu filtering.
+- School Management System Portal: Role-based dashboard portal for students, teachers, and administration.

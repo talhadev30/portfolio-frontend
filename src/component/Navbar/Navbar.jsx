@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 import Navlink from './Navlink'
 import Sociallink from './Sociallink'
 import Cvbutton from './Cvbutton'
+import { OWNER } from '../../data/portfolioData'
 
 const Navbar = (props) => {
   const [open, setOpen] = useState(false)
@@ -96,21 +97,39 @@ const Navbar = (props) => {
     setOpen(!open);
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && open) {
+        closeMenu();
+        setOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [open]);
+
   return (
     <>
-      <nav className='h-14 w-full px-5 lg:px-20 flex font-[League] items-center py-10 justify-between z-40 pointer-coarse: fixed top-0 left-0'>
+      <nav aria-label="Main Navigation" className='h-14 w-full px-5 lg:px-20 flex font-[League] items-center py-10 justify-between z-40 pointer-coarse: fixed top-0 left-0'>
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Talha Salman Home" className='text-3xl font-medium hover:text-zz'>Talha</Link>
-        <div className='flex items-center  justify-center'>
+        <div className='flex items-center justify-center'>
           <div ref={Buttonref} className='flex items-center justify-center'>
             <Cvbutton />
-            </div>
-        <div onClick={menuanimation} className='gap-2 p-5 flex flex-col items-center justify-center'>
-          <div ref={rotater} className='h-1 w-12 bg-white'></div>
-          <div ref={rotaters} className='h-1 w-12 bg-white'></div>
-        </div>
+          </div>
+          <button 
+            type="button"
+            onClick={menuanimation} 
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            className='gap-2 p-5 flex flex-col items-center justify-center cursor-pointer bg-transparent border-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded'
+          >
+            <span ref={rotater} className='h-1 w-12 bg-white block'></span>
+            <span ref={rotaters} className='h-1 w-12 bg-white block'></span>
+          </button>
         </div>
       </nav>
-      <div ref={hamburger} className='pointer-events-auto lg:max-h-screen h-[110%] w-full z-35 bg-mist-300 fixed -top-[110%] lg:-top-full  font-[League] text-black overflow-y-hidden'>
+      <div id="mobile-navigation" ref={hamburger} className='pointer-events-auto lg:max-h-screen h-[110%] w-full z-35 bg-mist-300 fixed -top-[110%] lg:-top-full font-[League] text-black overflow-y-hidden'>
         <div className="wraper relative w-full h-full px-5 py-25 lg:px-20 top-0 left-0">
           <div className='w-full mb-5 lg:mb-16 gap-5 md:flex-row lg:flex-row flex-col flex items-start lg:items-center justify-between lg:overflow-hidden md:overflow-hidden overflow-visible'>
             <Navlink name="Home" path="/" />
@@ -121,10 +140,9 @@ const Navbar = (props) => {
             <Navlink name="Contact" path="/contact" />
           </div>
           <div className='border-t-4 flex lg:flex-row items-start justify-start lg:justify-between py-5 flex-wrap gap-y-10 gap-20'>
-            <Sociallink name="facebook" label='facebook profile' Link="https://www.facebook.com/profile.php?id=61589720709211" />
-            <Sociallink name="instagram" label='instagram profile' Link="https://www.instagram.com/talha.dev30/" />
-            <Sociallink name="linkedin" label='linkdin profile' Link="https://www.linkedin.com/in/m-talha-salman-66832839b" />
-            <Sociallink name="github" label='github profile' Link="https://www.github.com/talhadev30" />
+            {OWNER.socials.map((s) => (
+              <Sociallink key={s.name} name={s.name.toLowerCase()} label={s.label} Link={s.url} />
+            ))}
           </div>
         </div>
       </div>
@@ -132,4 +150,4 @@ const Navbar = (props) => {
   )
 }
 
-export default Navbar
+export default Navbar;
