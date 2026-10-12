@@ -91,3 +91,4 @@ export const getRouteMetadata = (path) => {
 };
 
 export default ROUTES;
+

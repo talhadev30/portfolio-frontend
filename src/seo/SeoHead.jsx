@@ -38,3 +38,4 @@ export const SeoHead = ({ path }) => {
 };
 
 export default SeoHead;
+
