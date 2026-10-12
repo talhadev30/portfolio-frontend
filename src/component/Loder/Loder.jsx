@@ -27,22 +27,23 @@ useGSAP(() => {
 
     tl.to(paths, {
       strokeDashoffset: 0,
-      duration: 1.5,
-      ease: "power4.in",
+      duration: 0.9,
+      ease: "power3.inOut",
       fill: "#fff",
-      stagger: 0.3,
+      stagger: 0.12,
     });
 
     tl.to(container.current.querySelector("svg"), {
-      y: -100,
-      duration: 1,
+      y: -80,
+      duration: 0.4,
       opacity: 0,
       ease: "power2.in",
     });
 
     tl.to(container.current, {
-      height: 0,
-      duration: 1,
+      yPercent: -100,
+      duration: 0.6,
+      ease: "power3.inOut",
       onComplete: () => {
         gsap.set(container.current, { display: "none" });
       },

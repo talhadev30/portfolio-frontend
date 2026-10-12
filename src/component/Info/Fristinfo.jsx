@@ -94,12 +94,19 @@ const Firsetinfo = () => {
         </div>
         <div className="lg:h-1/4 lg:w-1/4 h-66 w-66 absolute top-2/7 lg:top-2/8 md:top-2/6 -z-50 left-2/4 -translate-y-2/4 -translate-x-2/4">
           <div className="w-full overflow-hidden">
-            <img
-              ref={imgref}
-              src="./my.png"
-              alt="Talha Salman Full Stack Web Developer"
-              className="w-full h-auto object-cover rounded-3xl"
-            />
+            <picture>
+              <source srcSet="/my.webp" type="image/webp" />
+              <img
+                ref={imgref}
+                src="/my.png"
+                alt="Talha Salman Full Stack Web Developer"
+                width={684}
+                height={918}
+                loading="eager"
+                decoding="async"
+                className="w-full h-auto object-cover rounded-3xl"
+              />
+            </picture>
           </div>
         </div>
       </div>

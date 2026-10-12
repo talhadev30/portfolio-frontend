@@ -51,17 +51,66 @@ export const getJsonLdForRoute = (routePath) => {
   const graph = [websiteEntity, personEntity];
 
   if (normalized === "/") {
-    graph.push({
-      "@type": "WebPage",
-      "@id": `${SITE_URL}/#webpage`,
-      url: `${SITE_URL}/`,
-      name: "Talha Salman | Full Stack Web Developer & MERN Specialist",
-      description:
-        "Portfolio of Talha Salman, Full Stack MERN Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance web applications.",
-      isPartOf: { "@id": websiteId },
-      about: { "@id": personId },
-      inLanguage: "en",
-    });
+    graph.push(
+      {
+        "@type": "WebPage",
+        "@id": `${SITE_URL}/#webpage`,
+        url: `${SITE_URL}/`,
+        name: "Talha Salman | Full Stack Web Developer & MERN Specialist",
+        description:
+          "Portfolio of Talha Salman, Full Stack MERN Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance web applications.",
+        isPartOf: { "@id": websiteId },
+        about: { "@id": personId },
+        inLanguage: "en",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${SITE_URL}/#faq`,
+        isPartOf: { "@id": `${SITE_URL}/#webpage` },
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "What does Talha Salman specialize in?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Talha Salman is a Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React, and Node.js), JavaScript (ES6+), and Tailwind CSS. He engineers responsive single-page applications, custom user interfaces, and scalable RESTful API backends.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Which web technologies and frameworks does Talha Salman use?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "On the frontend, Talha builds with React.js, Tailwind CSS, HTML5, CSS3, and GSAP animations. On the backend, he develops with Node.js, Express.js, PHP, and REST APIs with MongoDB and MySQL databases. His workflow tools include Git, GitHub, VS Code, Postman, Vite, and Vercel.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What featured web applications are in Talha Salman's portfolio?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Key portfolio projects include an Online Banking System built with React, Node.js, and JWT authentication; a Modern Restaurant & Food Ordering web application featuring interactive menus; and a School Management System administrative portal.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is Talha Salman available for remote web development work?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Talha Salman is based in Karachi, Pakistan, and is available for worldwide remote work, freelance contract development, and technical consultations.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How can I contact Talha Salman for a project?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "You can send project inquiries through the contact page form on this website, or connect directly through verified profiles on GitHub (github.com/talhadev30) and LinkedIn (linkedin.com/in/m-talha-salman-66832839b).",
+            },
+          },
+        ],
+      }
+    );
   } else if (normalized === "/work") {
     const itemListId = `${SITE_URL}/work#itemlist`;
 

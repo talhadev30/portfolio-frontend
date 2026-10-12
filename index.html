@@ -122,15 +122,21 @@
         ]
       }
     </script>
+    <noscript>
+      <style>
+        .parint { display: none !important; }
+      </style>
+    </noscript>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <noscript
-      >This portfolio works best with JavaScript enabled. The main content is
-      shown above.</noscript
-    >
+    <noscript>
+      <div style="padding: 1rem; background: #111; color: #fff; text-align: center; font-family: sans-serif; font-size: 14px;">
+        Talha Salman — Full Stack Web Developer &amp; MERN Specialist. JavaScript is disabled, showing semantic HTML content.
+      </div>
+    </noscript>
 
     <script type="module" src="/src/main.jsx"></script>
   </body>

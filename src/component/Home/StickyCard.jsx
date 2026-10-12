@@ -6,13 +6,20 @@ const StickyCard = (props) => {
 
   return (
     <div className="h-screen sticky top-0 w-full overflow-hidden">
-      <img
-        src={props.img}
-        alt={props.alt || props.ProductName}
-        loading="lazy"
-        decoding="async"
-        className="bg-cover w-full h-full object-cover"
-      />
+      <picture className="w-full h-full">
+        {props.img && props.img.endsWith('.png') && (
+          <source srcSet={props.img.replace(/\.png$/, '.webp')} type="image/webp" />
+        )}
+        <img
+          src={props.img}
+          alt={props.alt || props.ProductName}
+          width={props.width || 1376}
+          height={props.height || 768}
+          loading="lazy"
+          decoding="async"
+          className="bg-cover w-full h-full object-cover"
+        />
+      </picture>
       <div className='absolute top-0 left-0 w-full h-full z-40 flex items-center justify-center'>
         <div className='h-2/5 w-fit gap-3 flex flex-col items-center justify-center'>
           <div className='flex w-full gap-2 text-[12px] text-white/80 items-start justify-start'>

@@ -107,15 +107,21 @@ const Workflowcard = (props) => {
                 <div className='flex flex-col items-start justify-start'>
                     <div className='flex items-start justify-between w-full font-[League]'>
                         <div className='m-7 lg:m-10'>
-                            <h4 className='text-6xl'>0{props.numbers}</h4>
-                            <h4 className='text-8xl uppercase text-white'>
+                            <span className='text-6xl block select-none'>0{props.numbers}</span>
+                            <h3 className='text-8xl uppercase text-white font-[League]'>
                                 {props.title}
-                            </h4>
+                            </h3>
                         </div>
-                        <div onClick={!ismobile ? undefined : clicked} className='lg:hidden md:hidden h-20 w-20 relative flex items-center justify-center'>
-                            <div ref={rotate} className='w-1 h-7 absolute bg-white'></div>
-                            <div className='w-1 h-7 absolute rotate-90 bg-white'></div>
-                        </div>
+                        <button 
+                            type="button"
+                            onClick={!ismobile ? undefined : clicked} 
+                            aria-label={`Toggle ${props.title} details`}
+                            aria-expanded={isopen}
+                            className='lg:hidden md:hidden h-20 w-20 relative flex items-center justify-center bg-transparent border-0 cursor-pointer focus:outline-none'
+                        >
+                            <span ref={rotate} className='w-1 h-7 absolute bg-white block'></span>
+                            <span className='w-1 h-7 absolute rotate-90 bg-white block'></span>
+                        </button>
                     </div>
                 </div>
                 <div ref={Textref} className='px-10 flex items-center justify-between w-full opacity-0'>

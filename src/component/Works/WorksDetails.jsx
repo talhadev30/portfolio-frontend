@@ -13,6 +13,17 @@ const WorksDetails = () => {
   return (
     <section className="w-full bg-black text-white py-24 px-6 md:px-16 lg:px-20 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex items-center gap-2 text-xs uppercase tracking-wider text-zinc-400">
+            <li>
+              <Link to="/" onClick={scrollToTop} className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li aria-hidden="true" className="text-zinc-600">/</li>
+            <li aria-current="page" className="text-emerald-400 font-medium">Featured Works</li>
+          </ol>
+        </nav>
+
         {/* Section Header */}
         <div className="mb-14">
           <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold">
@@ -21,9 +32,9 @@ const WorksDetails = () => {
           <h2 className="font-[League] text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter mt-2 mb-6">
             Full-Stack Case Studies & Web Applications
           </h2>
-          <h3 className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
             Production-ready digital products combining clean architecture, intuitive UI/UX design, and scalable backend workflows.
-          </h3>
+          </p>
         </div>
 
         {/* Detailed SEO Content Paragraphs */}
