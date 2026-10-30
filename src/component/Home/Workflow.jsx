@@ -8,7 +8,7 @@ const Workflow = () => {
   return (
     <div>
         <Projecttext text1={"my development"} text2={"workflow"} />
-    <div className="min-h-[200vh] relative w-full lg:m-20 px-5 ">
+    <div className="min-h-[150vh] relative w-full lg:m-20 px-5 ">
       <div className="w-full h-full relative">
         {Workflowcards.map((item) => (
           <Workflowcard
