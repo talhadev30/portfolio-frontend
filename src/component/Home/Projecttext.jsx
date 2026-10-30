@@ -2,12 +2,15 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import React, { useRef } from 'react'
+import { prefersReducedMotion } from '../../utils/motion'
 const Projecttext = (props) => {
 
   const containerref = useRef(null)
   const revelref = useRef(null)
 
   useGSAP(() => {
+    if (prefersReducedMotion()) return
+
     gsap.registerPlugin(ScrollTrigger)
     gsap.fromTo(revelref.current, {
       rotateX: 90,

@@ -2,15 +2,18 @@ import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/all';
+import { prefersReducedMotion } from '../utils/motion';
 
 /**
  * Reusable hook to animate text characters into view using GSAP SplitText.
  * Consolidates duplicated SplitText reveal timelines across hero, info, and works headers.
  */
-export const useSplitReveal = (options = {}) => {
+const useSplitReveal = (options = {}) => {
   const textRef = useRef(null);
 
   useGSAP(() => {
+    if (prefersReducedMotion()) return;
+
     gsap.registerPlugin(SplitText);
 
     if (!textRef.current) return;
@@ -37,4 +40,3 @@ export const useSplitReveal = (options = {}) => {
 };
 
 export default useSplitReveal;
-

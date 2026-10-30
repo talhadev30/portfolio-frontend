@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
 import { SKILL_CATEGORIES } from "../../data/portfolioData";
+import { prefersReducedMotion, scrollToTop } from "../../utils/motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,8 @@ const Thirdinfo = () => {
   const containerref = useRef(null);
 
   useEffect(() => {
+    if (prefersReducedMotion()) return undefined;
+
     const tl = gsap.timeline({
       scrollTrigger: {
           trigger: containerref.current,
@@ -61,6 +64,11 @@ const Thirdinfo = () => {
         },
         ease: "power3.out",
       },"-=1.5");
+
+    return () => {
+      tl.scrollTrigger?.kill();
+      tl.kill();
+    };
   }, []);
 
   return (
@@ -131,21 +139,21 @@ const Thirdinfo = () => {
         <div className="flex flex-wrap gap-6">
           <Link
             to="/work"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={scrollToTop}
             className="hover:text-white underline underline-offset-4"
           >
             See Projects Built With These Technologies
           </Link>
           <Link
             to="/contact"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={scrollToTop}
             className="hover:text-white underline underline-offset-4"
           >
             Hire Me for Full Stack Development
           </Link>
           <Link
             to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={scrollToTop}
             className="hover:text-white underline underline-offset-4"
           >
             Back to Home

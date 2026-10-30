@@ -2,7 +2,7 @@ import React from "react";
 import Firsetinfo from "../component/Info/Fristinfo";
 import Secondinfo from "../component/Info/Secondinfo";
 import ThirdInfo from "../component/Info/ThirdInfo";
-import Foureinfo from "../component/Info/Foureinfo";
+import Workflow from "../component/Home/Workflow";
 import SeoHead from "../seo/SeoHead";
 
 const Info = () => {
@@ -13,7 +13,9 @@ const Info = () => {
         <Firsetinfo />
         <Secondinfo />
         <ThirdInfo />
-        <Foureinfo />
+        <div className="mb-10">
+          <Workflow />
+        </div>
       </div>
     </>
   );

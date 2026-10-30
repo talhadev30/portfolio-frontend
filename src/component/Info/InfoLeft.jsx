@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../utils/motion";
 
 const InfoLeft = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <div className="lg:w-1/3">
       <h2 className="uppercase font-[League] text-6xl md:text-8xl lg:text-7xl tracking-tighter 2xl:text-8xl">

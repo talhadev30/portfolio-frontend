@@ -19,7 +19,7 @@ button {
     transition: all ease-in 0.3s;
 }
 
-/* white button nimation */
+/* white button animation */
 .btns::after {
     content: "";
     position: absolute;
@@ -48,7 +48,7 @@ button {
     color: #000;
 }
 
-/* black button nimation */
+/* black button animation */
 .btn::after {
     content: "";
     position: absolute;
@@ -59,17 +59,11 @@ button {
     background-color: #000;
     border-radius: 50%;
     transition: all ease-in 0.3s;
-
 }
 
 .btn:hover::after {
     top: 0;
     border-radius: 0;
-}
-
-.btn:hover button a {
-    color: #fff;
-    z-index: 10;
 }
 
 /* sticky card hover effect */
@@ -94,7 +88,6 @@ button {
 }
 .bluranimation{
     animation: bluranimation ease-in-out backwards 6s infinite alternate;
-    
 }
 
 @media (min-width:0px) and (max-width:480px) {
@@ -117,17 +110,11 @@ button {
 @keyframes bluranimation {
     from {
         transform: skew(0%);
-       
     }
 
     to {
         transform: skew(18deg);
     }
-}
-/* wrapper */
-.marquee-wrapper{
-  width: 100%;
-  overflow: hidden;
 }
 
 /* wrapper */
@@ -168,5 +155,20 @@ button {
 
   to{
     transform: translateX(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

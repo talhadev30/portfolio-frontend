@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import InfoText from "./InfoText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { prefersReducedMotion } from "../../utils/motion";
 
 const Firstinfo = () => {
   const containerRef = useRef(null);
@@ -11,8 +12,10 @@ const Firstinfo = () => {
   const wrapperRef = useRef(null);
 
   // Text and image entrance animations
-  useGSAP(
+  const { contextSafe } = useGSAP(
     () => {
+      if (prefersReducedMotion()) return;
+
       gsap.from([pra1.current, pra2.current], {
         opacity: 0,
         y: 40,
@@ -40,46 +43,48 @@ const Firstinfo = () => {
   );
 
   // Smooth mouse movement
+  const ImgPositionHandlear = (event) => {
+    contextSafe(() => {
+      if (prefersReducedMotion()) return;
+      if (!wrapperRef.current || !containerRef.current) return;
 
-// Smooth mouse movement
-const ImgPositionHandlear = (e) => {
-  if (!wrapperRef.current || !containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const mouseX = (event.clientX - rect.left) / rect.width;
+      const mouseY = (event.clientY - rect.top) / rect.height;
+      const deltaX = (mouseX - 0.5) * 2;
+      const deltaY = (mouseY - 0.5) * 2;
 
-  const rect = containerRef.current.getBoundingClientRect();
+      gsap.to(wrapperRef.current, {
+        x: deltaX * 100,
+        y: deltaY * 80,
+        rotationX: -deltaY * 8,
+        rotationY: deltaX * 8,
+        rotationZ: deltaX * 2,
+        duration: 0.8,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    })();
+  };
 
-  const mouseX = (e.clientX - rect.left) / rect.width;
-  const mouseY = (e.clientY - rect.top) / rect.height;
+  // Smooth reset
+  const ImgResetHandlear = () => {
+    contextSafe(() => {
+      if (prefersReducedMotion()) return;
+      if (!wrapperRef.current) return;
 
-  const deltaX = (mouseX - 0.5) * 2;
-  const deltaY = (mouseY - 0.5) * 2;
-
-  gsap.to(wrapperRef.current, {
-    x: deltaX * 100,
-    y: deltaY * 80,
-    rotationX: -deltaY * 8,
-    rotationY: deltaX * 8,
-    rotationZ: deltaX * 2,
-    duration: 0.8,
-    ease: "power3.out",
-    overwrite: "auto",
-  });
-};
-
-// Smooth reset
-const ImgResetHandlear = () => {
-  if (!wrapperRef.current) return;
-
-  gsap.to(wrapperRef.current, {
-    x: 0,
-    y: 0,
-    rotationX: 0,
-    rotationY: 0,
-    rotationZ: 0,
-    duration: 1.2,
-    ease: "elastic.out(1, 0.6)",
-    overwrite: "auto",
-  });
-};
+      gsap.to(wrapperRef.current, {
+        x: 0,
+        y: 0,
+        rotationX: 0,
+        rotationY: 0,
+        rotationZ: 0,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.6)",
+        overwrite: "auto",
+      });
+    })();
+  };
 
   return (
     <section

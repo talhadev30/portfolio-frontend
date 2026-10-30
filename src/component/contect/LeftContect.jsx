@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle2, Clock, Globe, ArrowRight } from "lucide-react";
+import { scrollToTop } from "../../utils/motion";
 
 const leftContect = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <div className="flex flex-col justify-between h-full">
       <div>

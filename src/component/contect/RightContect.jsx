@@ -281,15 +281,22 @@ const RightContect = () => {
       return;
     }
 
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY?.trim();
+    if (!accessKey) {
+      toast.error("The contact form is temporarily unavailable. Please reach out through GitHub or LinkedIn.");
+      return;
+    }
+
     setIsSubmitting(true);
-    const formData = new FormData(event.target);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     // Send the full international number, for example "+1 2025550123"
     formData.set("phone", `+${selectedCountry.phonecode} ${phone.trim()}`);
     formData.set("country", selectedCountry.name || selectedCountry.iso2);
 
     // Web3Forms Access Key
-    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_KEY);
+    formData.set("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -299,7 +306,7 @@ const RightContect = () => {
 
       const data = await response.json();
 
-      if (data.success) {
+      if (response.ok && data.success) {
         toast.success("Form Submitted Successfully!");
 
         setUsername("");
@@ -308,9 +315,9 @@ const RightContect = () => {
         setPhone("");
         setSelectedCountry(null);
 
-        event.target.reset();
+        form.reset();
       } else {
-        toast.error(data.message || "Error submitting form");
+        toast.error(data.message || "Could not send your message. Please try again.");
       }
     } catch (error) {
       console.error(error);
@@ -382,7 +389,7 @@ const RightContect = () => {
       />
 
       {/* form */}
-      <form onSubmit={onSubmit} className="w-full flex flex-col gap-8">
+      <form onSubmit={onSubmit} aria-busy={isSubmitting} className="w-full flex flex-col gap-8">
         {/* NAME + EMAIL */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* NAME */}
@@ -401,6 +408,7 @@ const RightContect = () => {
               id="contact-name"
               type="text"
               name="name"
+              autoComplete="name"
               required
               aria-required="true"
               aria-invalid={!!usererr}
@@ -438,6 +446,7 @@ const RightContect = () => {
               id="contact-email"
               type="email"
               name="email"
+              autoComplete="email"
               required
               aria-required="true"
               aria-invalid={!!emailerr}
@@ -485,6 +494,8 @@ const RightContect = () => {
               id="contact-phone"
               type="tel"
               name="phone"
+              autoComplete="tel-national"
+              inputMode="tel"
               required
               aria-label="Phone number"
               aria-required="true"

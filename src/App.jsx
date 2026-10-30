@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Navbar from './component/Navbar/Navbar'
 import Home from './pages/Home'
 import Loder from './component/Loder/Loder'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Works from './pages/Works'
 import Info from './pages/Info'
 import Contect from './pages/Contect'
@@ -11,16 +11,23 @@ import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import Footer from './component/Footer/Footer'
+import { prefersReducedMotion } from './utils/motion'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
-
-  gsap.registerPlugin(ScrollTrigger)
+  const location = useLocation()
+  const lenisRef = useRef(null)
+  const previousPath = useRef(location.pathname)
 
   useEffect(() => {
+    if (prefersReducedMotion()) return undefined
+
     const lenis = new Lenis({
       duration: 1.5,
-      smooth: true
+      smoothWheel: true,
     })
+    lenisRef.current = lenis
 
     // Sync Lenis with ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update)
@@ -31,14 +38,28 @@ const App = () => {
     }
 
     gsap.ticker.add(update)
-    gsap.ticker.lagSmoothing(0)
-
-    // Cleanup
     return () => {
       lenis.destroy()
       gsap.ticker.remove(update)
+      lenisRef.current = null
     }
   }, [])
+
+  useEffect(() => {
+    if (previousPath.current === location.pathname) return undefined
+
+    previousPath.current = location.pathname
+    const frame = requestAnimationFrame(() => {
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(0, { immediate: true })
+      } else {
+        window.scrollTo({ top: 0, behavior: "auto" })
+      }
+      ScrollTrigger.refresh()
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [location.pathname])
 
   return (
     <div className='relative w-full bg-black text-white'>
@@ -50,7 +71,7 @@ const App = () => {
       </a>
       <Loder />
       <Navbar />
-      <main id="main-content" className='relative z-20 bg-black mb-[100vh]'>
+      <main id="main-content" tabIndex={-1} className='relative z-20 bg-black mb-[100vh]'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/work' element={<Works />} />

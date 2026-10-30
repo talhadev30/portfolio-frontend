@@ -1,64 +1,13 @@
-import React, { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
-
-gsap.registerPlugin(SplitText);
+import { useRef } from "react";
+import useRollingLink from "../../hooks/useRollingLink";
 
 const Sociallink = ({ name, Link, label }) => {
-  const wrapper = useRef(null);
-
-  useGSAP(
-    () => {
-      const splits = [];
-
-      wrapper.current.querySelectorAll(".split").forEach((el) => {
-        splits.push(
-          new SplitText(el, {
-            type: "chars",
-            charsClass: "chars",
-          })
-        );
-      });
-
-      return () => {
-        splits.forEach((split) => split.revert());
-      };
-    },
-    { scope: wrapper }
-  );
-
-  // Hover In
-  const handleHoverIn = (e) => {
-    const el = e.currentTarget;
-    const chars = el.querySelectorAll(".chars");
-
-    if (!el.timeline) {
-      el.timeline = gsap.timeline({ paused: true });
-
-      el.timeline.to(chars, {
-        yPercent: -100,
-        stagger: 0.025,
-        duration: 0.45,
-        ease: "power4.inOut",
-      });
-    }
-
-    el.timeline.play();
-  };
-
-  // Hover Out
-  const handleHoverOut = (e) => {
-    const el = e.currentTarget;
-
-    if (el.timeline) {
-      el.timeline.reverse();
-    }
-  };
+  const wrapperRef = useRef(null);
+  const { handleHoverIn, handleHoverOut } = useRollingLink(wrapperRef);
 
   return (
     <div
-      ref={wrapper}
+      ref={wrapperRef}
       className="overflow-hidden select-none"
       onMouseEnter={handleHoverIn}
       onMouseLeave={handleHoverOut}

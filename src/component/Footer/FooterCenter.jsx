@@ -2,6 +2,7 @@ import { Heart } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { OWNER, NAV_LINKS } from '../../data/portfolioData';
+import { scrollToTop } from '../../utils/motion';
 
 const FooterCenter = () => {
     return (
@@ -15,7 +16,7 @@ const FooterCenter = () => {
                     <div className='flex items-center justify-center font-[League] '>
                         <button 
                             type="button"
-                            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} 
+                            onClick={scrollToTop}
                             aria-label="Back to top of page"
                             className='whitespace-nowrap btn relative text-center my-15 hover:text-white py-1 px-3 border text-[18px] rounded-3xl overflow-hidden cursor-pointer'
                         >
@@ -29,7 +30,7 @@ const FooterCenter = () => {
                         <ul className='list-none uppercase py-3 flex flex-col gap-2'>
                             {NAV_LINKS.map((link) => (
                                 <li key={link.path} className='hover:text-black/60'>
-                                    <Link to={link.path} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                                    <Link to={link.path} onClick={scrollToTop}>
                                         {link.name}
                                     </Link>
                                 </li>

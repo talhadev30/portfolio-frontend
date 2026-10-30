@@ -7,7 +7,7 @@ import { getRouteMetadata, SITE_NAME } from "./routes";
  * Takes the route path and dynamically emits title, description, canonical, robots, OG, and Twitter tags.
  * Explicitly removes all obsolete meta keywords tags.
  */
-export const SeoHead = ({ path }) => {
+const SeoHead = ({ path }) => {
   const meta = getRouteMetadata(path);
 
   return (
@@ -38,4 +38,3 @@ export const SeoHead = ({ path }) => {
 };
 
 export default SeoHead;
-

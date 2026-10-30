@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Home as HomeIcon, Briefcase, User, Mail, ArrowLeft } from "lucide-react";
 import SeoHead from "../seo/SeoHead";
 import { NAV_LINKS } from "../data/portfolioData";
+import { scrollToTop } from "../utils/motion";
 
 const NotFound = () => {
   const getIcon = (path) => {
@@ -42,7 +43,7 @@ const NotFound = () => {
 
           <Link
             to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={scrollToTop}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white text-black font-semibold text-sm hover:bg-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white transition-all duration-200 mb-12 cursor-pointer"
           >
             <ArrowLeft size={16} /> Return to Homepage
@@ -57,7 +58,7 @@ const NotFound = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  onClick={scrollToTop}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-zinc-200 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white transition-all"
                 >
                   {getIcon(link.path)}

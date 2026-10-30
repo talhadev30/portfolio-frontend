@@ -1,12 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Code2, Server, Gauge, ArrowRight } from "lucide-react";
+import { scrollToTop } from "../../utils/motion";
 
 const HomeOverview = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <section className="w-full bg-black text-white py-20 px-6 md:px-16 lg:px-20 border-t border-b border-white/10">
       <div className="max-w-7xl mx-auto">

@@ -2,12 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { PROJECTS } from "../../data/portfolioData";
+import { scrollToTop } from "../../utils/motion";
 
 const WorksDetails = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const projectList = PROJECTS;
 
   return (
@@ -156,6 +153,7 @@ const WorksDetails = () => {
             </Link>
           </div>
         </div>
+        
       </div>
     </section>
   );
