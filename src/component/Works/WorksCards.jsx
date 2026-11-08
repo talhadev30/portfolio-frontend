@@ -17,7 +17,7 @@ const WorksCards = () => {
                 </div>
             </div>
             <div className='relative'>
-                <StickyCard img={"/project1.webp"} alt={"Banking System"} ProductName={"Banking System"} link="https://talha-banking-system.vercel.app/" />
+                <StickyCard img={"/project1.webp"} alt={"Banking System"} ProductName={"Banking System"} />
                 <StickyCard img={"/product2.webp"} alt={"E-commerce Glasses Store"} ProductName={"E-commerce Website"} link="https://zoravelle.dpdns.org" />
                 <StickyCard img={"/product3.webp"} alt={"School Management System"} ProductName={"School Management System"} />
             </div>

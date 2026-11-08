@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useRef } from "react";
 import { prefersReducedMotion } from "../../utils/motion";
 
-const Loder = () => {
+const Loder = ({ onComplete }) => {
   const container = useRef(null);
   const metaRef = useRef(null);
   const svgRef = useRef(null);
@@ -23,6 +23,7 @@ const Loder = () => {
       if (prefersReducedMotion()) {
         gsap.set(loaderEl, { display: "none" });
         gsap.set(body, { overflow: "auto" });
+        onComplete?.();
         return;
       }
 
@@ -105,10 +106,11 @@ const Loder = () => {
         onComplete: () => {
           gsap.set(loaderEl, { display: "none" });
           gsap.set(body, { overflow: "auto" });
+          onComplete?.();
         },
       });
     },
-    { scope: container }
+    { scope: container, dependencies: [onComplete], revertOnUpdate: true }
   );
 
   return (

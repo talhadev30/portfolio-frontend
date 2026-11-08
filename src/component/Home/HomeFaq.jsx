@@ -3,29 +3,29 @@ import { ChevronDown } from "lucide-react";
 
 const FAQ_ITEMS = [
   {
-    question: "What does Talha Salman specialize in?",
+    question: "What do you build?",
     answer:
-      "Talha Salman is a Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React, and Node.js), JavaScript (ES6+), and Tailwind CSS. He engineers responsive single-page applications, custom user interfaces, and scalable RESTful API backends.",
+      "I build web apps with React, JavaScript, and the MERN stack: MongoDB, Express, React, and Node.js. I also use Tailwind CSS and REST APIs.",
   },
   {
-    question: "Which web technologies and frameworks does Talha Salman use?",
+    question: "What tools do you use?",
     answer:
-      "On the frontend, Talha builds with React.js, Tailwind CSS, HTML5, CSS3, and GSAP animations. On the backend, he develops with Node.js, Express.js, PHP, and REST APIs with MongoDB and MySQL databases. His workflow tools include Git, GitHub, VS Code, Postman, Vite, and Vercel.",
+      "I use React, Tailwind CSS, HTML, and CSS for pages. I build APIs with Node.js, Express, and PHP, and store data in MongoDB or MySQL. My tools include Git, GitHub, VS Code, Postman, Vite, and Vercel.",
   },
   {
-    question: "What featured web applications are in Talha Salman's portfolio?",
+    question: "What projects have you built?",
     answer:
-      "Key portfolio projects include an Online Banking System built with React, Node.js, and JWT authentication; a Modern Restaurant & Food Ordering web application featuring interactive menus; and a School Management System administrative portal.",
+      "My portfolio includes a banking app, a restaurant ordering site, and a school portal. The banking app uses React, Node.js, and JWT sign-in.",
   },
   {
-    question: "Is Talha Salman available for remote web development work?",
+    question: "Are you open to remote work?",
     answer:
-      "Yes. Talha Salman is based in Karachi, Pakistan, and is available for worldwide remote work, freelance contract development, and technical consultations.",
+      "Yes. I am based in Karachi, Pakistan, and am open to remote work, freelance projects, and technical consulting.",
   },
   {
-    question: "How can I contact Talha Salman for a project?",
+    question: "How can I contact you?",
     answer:
-      "You can send project inquiries through the contact page form on this website, or connect directly through verified profiles on GitHub (github.com/talhadev30) and LinkedIn (linkedin.com/in/m-talha-salman-66832839b).",
+      "Use the contact form to tell me about your project. You can also reach me on GitHub or LinkedIn.",
   },
 ];
 
@@ -41,7 +41,7 @@ export const HomeFaq = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-14">
           <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold block mb-2">
-            Frequently Asked Questions
+            Got Questions?
           </span>
           <h2 id="faq-heading" className="font-[League] text-5xl sm:text-6xl md:text-7xl uppercase tracking-tighter">
             Frequently Asked Questions

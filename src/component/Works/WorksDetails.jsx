@@ -24,23 +24,23 @@ const WorksDetails = () => {
         {/* Section Header */}
         <div className="mb-14">
           <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold">
-            Case Studies & Solutions
+            Project Details
           </span>
           <h2 className="font-[League] text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter mt-2 mb-6">
-            Full-Stack Case Studies & Web Applications
+            Selected Projects and Web Apps
           </h2>
           <p className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
-            Production-ready digital products combining clean architecture, intuitive UI/UX design, and scalable backend workflows.
+            These projects show how I plan, design, and build useful web apps.
           </p>
         </div>
 
-        {/* Detailed SEO Content Paragraphs */}
+        {/* Project overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 text-zinc-300 text-sm md:text-base leading-relaxed">
           <p>
-            Welcome to my web development project portfolio. As a Full Stack Developer based in Karachi, Pakistan, I build applications that bridge creative design and reliable software engineering. Every application featured here demonstrates modern coding best practices, modular component structure, and rigorous testing for seamless user experiences.
+            I am a web developer in Karachi, Pakistan. I build websites and apps with clear layouts, useful features, and code that is easy to update.
           </p>
           <p>
-            From complex financial platforms with authentication and transaction processing to high-converting interactive web platforms, I focus on delivering clean code, cross-browser compatibility, and lightning-fast loading speeds. Explore each case study below to learn about the technologies, architectures, and problem-solving strategies applied.
+            The projects below include a banking app, a restaurant site, and a school portal. Each one solves a different problem with modern web tools.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ const WorksDetails = () => {
               Have a Project in Mind?
             </h3>
             <p className="text-zinc-400 text-sm max-w-xl">
-              I am available for freelance web development contracts, full-stack consulting, and engineering roles. Let's build your next digital product together.
+              I am open to freelance work, consulting, and developer roles. Let's build your next web project.
             </p>
           </div>
           <div className="flex flex-wrap gap-4">

@@ -17,7 +17,15 @@ export function render(url, helmetContext = {}) {
     </HelmetProvider>
   );
 
-  return { html };
+  const { helmet } = helmetContext;
+  const head = helmet
+    ? ["title", "meta", "link", "script"]
+        .map((tagName) => helmet[tagName]?.toString() ?? "")
+        .filter(Boolean)
+        .join("\n")
+    : "";
+
+  return { html, head };
 }
 
 export default render;

@@ -4,8 +4,11 @@ import { Home as HomeIcon, Briefcase, User, Mail, ArrowLeft } from "lucide-react
 import SeoHead from "../seo/SeoHead";
 import { NAV_LINKS } from "../data/portfolioData";
 import { scrollToTop } from "../utils/motion";
+import useSplitReveal from "../hooks/useSplitReveal";
 
 const NotFound = () => {
+  const headingRef = useSplitReveal();
+
   const getIcon = (path) => {
     switch (path) {
       case "/":
@@ -33,7 +36,7 @@ const NotFound = () => {
             404
           </span>
 
-          <h1 className="font-[League] text-4xl sm:text-6xl uppercase tracking-tight mt-2 mb-4">
+          <h1 ref={headingRef} className="font-[League] text-4xl sm:text-6xl uppercase tracking-tight mt-2 mb-4">
             Page Not Found
           </h1>
 

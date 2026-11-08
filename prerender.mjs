@@ -10,6 +10,34 @@ import { createServer } from "vite";
 const DIST = path.resolve("dist");
 const PUBLIC = path.resolve("public");
 
+const countTags = (html, pattern) => html.match(pattern)?.length ?? 0;
+
+const validateRouteHead = (route, head) => {
+  const expected = {
+    title: 1,
+    description: 1,
+    robots: 1,
+    canonical: route.canonical ? 1 : 0,
+  };
+  const actual = {
+    title: countTags(head, /<title\b/gi),
+    description: countTags(
+      head,
+      /<meta\b(?=[^>]*\bname=["']description["'])/gi,
+    ),
+    robots: countTags(head, /<meta\b(?=[^>]*\bname=["']robots["'])/gi),
+    canonical: countTags(head, /<link\b(?=[^>]*\brel=["']canonical["'])/gi),
+  };
+
+  for (const key of Object.keys(expected)) {
+    if (actual[key] !== expected[key]) {
+      throw new Error(
+        `Invalid head metadata for ${route.path}: expected ${expected[key]} ${key} tag(s), found ${actual[key]}`,
+      );
+    }
+  }
+};
+
 async function run() {
   console.log("[SSG] Starting build-time static HTML pre-rendering...");
 
@@ -41,15 +69,18 @@ async function run() {
       console.log(`[SSG] Rendering route: ${route.path} ...`);
 
       let appHtml = "";
+      let routeHead = "";
       try {
         const result = render(route.path);
         appHtml = result.html || "";
+        routeHead = result.head || "";
       } catch (renderErr) {
         console.warn(
           `[SSG Warning] SSR render issue on ${route.path}:`,
           renderErr.message,
         );
       }
+      validateRouteHead(route, routeHead);
 
       let html = baseTemplate;
 
@@ -66,102 +97,40 @@ async function run() {
         );
       }
 
-      // 2. Title
-      html = html.replace(
-        /<title[^>]*>.*?<\/title>/gi,
-        `<title>${route.title}</title>`,
-      );
-
-      // 3. Meta Description
-      if (/<meta[^>]*name=["']description["'][^>]*>/i.test(html)) {
-        html = html.replace(
-          /<meta[^>]*name=["']description["'][^>]*>/gi,
-          `<meta name="description" content="${route.description}">`,
+      // Remove any template metadata managed by React Helmet, then inject the
+      // route-specific server-rendered tags exactly once inside <head>.
+      html = html
+        .replace(/<title\b[^>]*>[\s\S]*?<\/title>\s*/gi, "")
+        .replace(
+          /<meta\b(?=[^>]*\bname=["'](?:description|robots|twitter:[^"']+)["'])[^>]*>\s*/gi,
+          "",
+        )
+        .replace(
+          /<meta\b(?=[^>]*\bproperty=["']og:[^"']+["'])[^>]*>\s*/gi,
+          "",
+        )
+        .replace(
+          /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>\s*/gi,
+          "",
+        )
+        .replace(
+          /<script\b(?=[^>]*\btype=["']application\/ld\+json["'])[^>]*>[\s\S]*?<\/script>\s*/gi,
+          "",
         );
-      } else {
-        html = html.replace(
-          "</head>",
-          `  <meta name="description" content="${route.description}">\n</head>`,
-        );
-      }
 
-      // 4. Remove meta keywords anywhere
-      html = html.replace(/<meta[^>]*name=["']keywords["'][^>]*>\s*/gi, "");
-
-      // 5. Canonical link (404 page MUST NOT have a canonical)
-      if (route.canonical) {
-        if (/<link[^>]*rel=["']canonical["'][^>]*>/i.test(html)) {
-          html = html.replace(
-            /<link[^>]*rel=["']canonical["'][^>]*>/gi,
-            `<link rel="canonical" href="${route.canonical}">`,
-          );
-        } else {
-          html = html.replace(
-            "</head>",
-            `  <link rel="canonical" href="${route.canonical}">\n</head>`,
-          );
-        }
-      } else {
-        // Strip canonical for 404
-        html = html.replace(/<link[^>]*rel=["']canonical["'][^>]*>\s*/gi, "");
-      }
-
-      // 6. Robots directive
-      if (/<meta[^>]*name=["']robots["'][^>]*>/i.test(html)) {
-        html = html.replace(
-          /<meta[^>]*name=["']robots["'][^>]*>/gi,
-          `<meta name="robots" content="${route.robots}">`,
-        );
-      } else {
-        html = html.replace(
-          "</head>",
-          `  <meta name="robots" content="${route.robots}">\n</head>`,
-        );
-      }
-
-      // 7. Open Graph
-      html = html.replace(
-        /<meta[^>]*property=["']og:title["'][^>]*>/gi,
-        `<meta property="og:title" content="${route.title}">`,
-      );
-      html = html.replace(
-        /<meta[^>]*property=["']og:description["'][^>]*>/gi,
-        `<meta property="og:description" content="${route.description}">`,
-      );
-      html = html.replace(
-        /<meta[^>]*property=["']og:type["'][^>]*>/gi,
-        `<meta property="og:type" content="${route.ogType}">`,
-      );
-      if (route.canonical) {
-        html = html.replace(
-          /<meta[^>]*property=["']og:url["'][^>]*>/gi,
-          `<meta property="og:url" content="${route.canonical}">`,
-        );
-      }
-
-      // 8. Twitter
-      html = html.replace(
-        /<meta[^>]*name=["']twitter:title["'][^>]*>/gi,
-        `<meta name="twitter:title" content="${route.title}">`,
-      );
-      html = html.replace(
-        /<meta[^>]*name=["']twitter:description["'][^>]*>/gi,
-        `<meta name="twitter:description" content="${route.description}">`,
-      );
-
-      // 9. Structured Data JSON-LD
+      // Structured Data JSON-LD
       const schemaData = getJsonLdForRoute(route.path);
-      // Remove any existing LD+JSON scripts in template
-      html = html.replace(
-        /<script[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>\s*/gi,
-        "",
-      );
-
+      let schemaTag = "";
       if (schemaData) {
         const schemaString = JSON.stringify(schemaData, null, 2);
-        const schemaTag = `  <script type="application/ld+json">\n${schemaString}\n  </script>\n`;
-        html = html.replace("</head>", `${schemaTag}</head>`);
+        schemaTag = `  <script type="application/ld+json">\n${schemaString}\n  </script>`;
       }
+
+      const headMarkup = [routeHead, schemaTag].filter(Boolean).join("\n");
+      if (!html.includes("</head>")) {
+        throw new Error(`HTML template is missing </head> for ${route.path}`);
+      }
+      html = html.replace("</head>", `${headMarkup}\n</head>`);
 
       // 10. Write file
       if (route.path === "/") {

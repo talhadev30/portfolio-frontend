@@ -1,79 +1,73 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { CheckCircle2, Clock, Globe, ArrowRight } from "lucide-react";
-import { scrollToTop } from "../../utils/motion";
+import { OWNER } from "../../data/portfolioData";
+import useSplitReveal from "../../hooks/useSplitReveal";
 
-const leftContect = () => {
+const LeftContect = () => {
+  const headingRef = useSplitReveal();
+
   return (
-    <div className="flex flex-col justify-between h-full">
-      <div>
-        <h1 className="uppercase font-[League] text-[5rem] sm:text-[7rem] md:text-[8rem] xl:text-[9rem] leading-[0.9] tracking-tight">
-          Let's Create
-          <br />
-          Something Great
-        </h1>
+    <div className="w-full">
+      {/* Eyebrow */}
+      <div className="flex items-center gap-3 mb-8">
+        <span className="h-1.5 w-1.5 rounded-full bg-white/60" aria-hidden="true" />
+        <span className="font-[League] text-xs uppercase tracking-[0.25em] text-white/50">
+          Get in touch
+        </span>
+      </div>
 
-        {/* Semantic Subheadings */}
-        <h2 className="font-[League] text-3xl sm:text-4xl uppercase tracking-tight text-zinc-200 mt-8 mb-2">
-          Hire a Full Stack Web Developer & Software Engineer
-        </h2>
-        <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mb-6">
-          Available for Freelance Contracts, Remote Roles & Technical Consultations
-        </h3>
+      {/* Giant heading */}
+      <h1
+        ref={headingRef}
+        className="font-[League] uppercase leading-[0.88] tracking-tighter text-[clamp(3.5rem,8vw,8rem)]"
+      >
+        Let's work
+        <br />
+        together
+      </h1>
 
-        {/* Detailed SEO Content (Over 120 words) */}
-        <div className="space-y-4 text-zinc-300 text-sm md:text-base leading-relaxed max-w-xl">
-          <p>
-            Whether you need to engineer a custom web application from scratch, rebuild a responsive frontend with React and Tailwind CSS, or develop secure RESTful APIs using Node.js and MongoDB, I am ready to collaborate on your vision.
-          </p>
-          <p>
-            Based in Karachi, Pakistan, and working with clients globally, I provide end-to-end development focused on clean maintainable code, optimal search engine ranking, and smooth user experiences. Reach out via the form with your project details, and I will respond within 24 hours.
-          </p>
+      <p className="mt-6 max-w-md text-sm leading-relaxed text-white/60 md:text-base">
+        Have a project in mind? Share a few details and I’ll get back to you within 24 hours.
+      </p>
+
+      {/* Minimal info row */}
+      <div className="mt-10 flex flex-wrap gap-x-10 gap-y-6 border-t border-white/10 pt-7">
+        <div>
+          <span className="mb-1 block font-[League] text-xs uppercase tracking-[0.2em] text-white/55">
+            Location
+          </span>
+          <span className="text-sm text-white/80">{OWNER.location}</span>
         </div>
-
-        {/* Highlights */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8 text-xs sm:text-sm text-zinc-300">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 size={16} className="text-emerald-400" />
-            <span>Available for new projects</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Clock size={16} className="text-blue-400" />
-            <span>Response time: Under 24h</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Globe size={16} className="text-purple-400" />
-            <span>Karachi, PK & Worldwide Remote</span>
-          </div>
+        <div>
+          <span className="mb-1 block font-[League] text-xs uppercase tracking-[0.2em] text-white/55">
+            Availability
+          </span>
+          <span className="text-sm text-white/80">Open for projects</span>
         </div>
-
-        {/* Contextual Internal Links */}
-        <div className="pt-6 border-t border-white/10 text-xs uppercase tracking-wider text-zinc-400 flex flex-wrap gap-4">
-          <Link
-            to="/work"
-            onClick={scrollToTop}
-            className="hover:text-white underline underline-offset-4"
-          >
-            Review Featured Projects
-          </Link>
-          <Link
-            to="/info"
-            onClick={scrollToTop}
-            className="hover:text-white underline underline-offset-4"
-          >
-            Learn About My Tech Stack
-          </Link>
-          <Link
-            to="/"
-            onClick={scrollToTop}
-            className="hover:text-white underline underline-offset-4"
-          >
-            Back to Home
-          </Link>
+        <div>
+          <span className="mb-1 block font-[League] text-xs uppercase tracking-[0.2em] text-white/55">
+            Response
+          </span>
+          <span className="text-sm text-white/80">Within 24 hours</span>
         </div>
+      </div>
+
+      {/* Socials */}
+      <div className="mt-8 flex flex-wrap gap-5">
+        {OWNER.socials.filter(({ name }) => name === "GitHub" || name === "LinkedIn").map((social) => (
+          <a
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={social.label}
+            className="pb-0.5 font-[League] text-xs uppercase tracking-[0.2em] text-white/55 transition-colors duration-300 hover:border-white/30 hover:text-white"
+          >
+            {social.name}
+          </a>
+        ))}
       </div>
     </div>
   );
 };
 
-export default leftContect;
+export default LeftContect;

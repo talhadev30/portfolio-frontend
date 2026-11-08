@@ -9,15 +9,15 @@ const InfoLeft = () => {
         A Little Bit About Me
       </h2>
       <h3 className="text-sm font-semibold uppercase tracking-wider text-emerald-400 mt-2 mb-4">
-        Full Stack Developer Journey & Philosophy
+        My Skills and Approach
       </h3>
 
       <p className="text-sm leading-relaxed text-zinc-300 py-2 md:text-xl lg:text-sm 2xl:text-base">
-        I am a passionate Full Stack Web Developer based in Karachi, Pakistan, specializing in building responsive, scalable, and user-centered web applications. My development stack spans modern frontend tools like React.js, Tailwind CSS, and JavaScript (ES6+), along with backend architectures utilizing Node.js, Express.js, PHP, and databases such as MySQL and MongoDB.
+        I am a web developer in Karachi, Pakistan. I build sites and apps with React, JavaScript, and Tailwind CSS. I also use Node.js, Express, PHP, MongoDB, and MySQL.
       </p>
 
       <p className="text-sm leading-relaxed text-zinc-300 py-2 md:text-xl lg:text-sm 2xl:text-base">
-        I prioritize writing maintainable code, adhering to clean architecture, optimizing web performance for search engine rankings, and ensuring seamless cross-device compatibility. My aim is to transform business ideas into impactful, accessible web solutions.
+        I write code that is easy to change and work to make each page fast and clear. My goal is to turn ideas into useful web tools that work on different devices.
       </p>
 
       <div className="pt-4 flex flex-wrap gap-4 text-xs uppercase tracking-wider text-zinc-400">

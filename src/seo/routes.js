@@ -14,9 +14,9 @@ export const ROUTES = [
   {
     path: "/",
     name: "Home",
-    title: "Talha Salman | Full Stack Web Developer & MERN Specialist",
+    title: "Talha Salman | Full-Stack Web Developer",
     description:
-      "Portfolio of Talha Salman, Full Stack MERN Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance web applications.",
+      "View web apps by Talha Salman, a Karachi-based developer who builds with React, Node.js, Express, and MongoDB.",
     canonical: `${SITE_URL}/`,
     robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     ogType: "website",
@@ -29,9 +29,9 @@ export const ROUTES = [
   {
     path: "/work",
     name: "Works",
-    title: "Featured Projects & Case Studies | Talha Salman",
+    title: "Web Development Projects | Talha Salman",
     description:
-      "Explore case studies and web apps by Talha Salman: Banking System, Food Ordering platform, and School portal built with React, Node.js, and modern tools.",
+      "See web projects by Talha Salman, including banking, restaurant, and school apps built with React and Node.js.",
     canonical: `${SITE_URL}/work`,
     robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     ogType: "website",
@@ -44,9 +44,9 @@ export const ROUTES = [
   {
     path: "/info",
     name: "Info",
-    title: "About Talha Salman | Full Stack Web Developer",
+    title: "About Talha Salman | Web Developer in Karachi",
     description:
-      "Learn about Talha Salman, Full Stack Developer in Karachi, Pakistan. Explore engineering skills in React, Node.js, Express, MongoDB, PHP, and modern web.",
+      "Meet Talha Salman, a web developer in Karachi. Explore his work with React, Node.js, PHP, and databases.",
     canonical: `${SITE_URL}/info`,
     robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     ogType: "profile",
@@ -59,9 +59,9 @@ export const ROUTES = [
   {
     path: "/contact",
     name: "Contact",
-    title: "Contact Talha Salman | Hire Full Stack Developer",
+    title: "Contact Talha Salman | Web Development",
     description:
-      "Get in touch with Talha Salman for custom web development, React and Node.js applications, freelance contracts, and software engineering opportunities.",
+      "Contact Talha Salman about websites, web apps, freelance projects, or software development roles.",
     canonical: `${SITE_URL}/contact`,
     robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
     ogType: "website",
@@ -77,7 +77,7 @@ export const NOT_FOUND_ROUTE = {
   path: "/404",
   name: "Page Not Found",
   title: "Page Not Found | Talha Salman",
-  description: "The requested page could not be found. Explore Talha Salman's portfolio projects, skills, or contact info.",
+  description: "This page could not be found. Visit Talha Salman's projects, about page, or contact page.",
   canonical: null,
   robots: "noindex, follow",
   ogType: "website",

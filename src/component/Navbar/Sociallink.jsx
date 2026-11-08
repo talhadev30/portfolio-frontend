@@ -30,14 +30,7 @@ const Sociallink = ({ name, Link, label }) => {
           aria-hidden="true"
           className="absolute left-0 top-full text-3xl md:text-5xl lg:text-[3vw] uppercase tracking-tight"
         >
-          <a
-            href={Link}
-            target="_blank"
-            rel="noopener noreferrer"
-            tabIndex={-1}
-          >
-            <span className="split inline-block">{name}</span>
-          </a>
+          <span className="split inline-block">{name}</span>
         </li>
       </ul>
     </div>

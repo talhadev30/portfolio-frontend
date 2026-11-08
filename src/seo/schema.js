@@ -56,9 +56,9 @@ export const getJsonLdForRoute = (routePath) => {
         "@type": "WebPage",
         "@id": `${SITE_URL}/#webpage`,
         url: `${SITE_URL}/`,
-        name: "Talha Salman | Full Stack Web Developer & MERN Specialist",
+        name: "Talha Salman | Full-Stack Web Developer",
         description:
-          "Portfolio of Talha Salman, Full Stack MERN Developer in Karachi specializing in React, Node.js, Express, MongoDB, and high-performance web applications.",
+          "View web apps by Talha Salman, a Karachi-based developer who builds with React, Node.js, Express, and MongoDB.",
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
         inLanguage: "en",
@@ -70,42 +70,42 @@ export const getJsonLdForRoute = (routePath) => {
         mainEntity: [
           {
             "@type": "Question",
-            name: "What does Talha Salman specialize in?",
+            name: "What do you build?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Talha Salman is a Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React, and Node.js), JavaScript (ES6+), and Tailwind CSS. He engineers responsive single-page applications, custom user interfaces, and scalable RESTful API backends.",
+              text: "I build web apps with React, JavaScript, and the MERN stack: MongoDB, Express, React, and Node.js. I also use Tailwind CSS and REST APIs.",
             },
           },
           {
             "@type": "Question",
-            name: "Which web technologies and frameworks does Talha Salman use?",
+            name: "What tools do you use?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "On the frontend, Talha builds with React.js, Tailwind CSS, HTML5, CSS3, and GSAP animations. On the backend, he develops with Node.js, Express.js, PHP, and REST APIs with MongoDB and MySQL databases. His workflow tools include Git, GitHub, VS Code, Postman, Vite, and Vercel.",
+              text: "I use React, Tailwind CSS, HTML, and CSS for pages. I build APIs with Node.js, Express, and PHP, and store data in MongoDB or MySQL. My tools include Git, GitHub, VS Code, Postman, Vite, and Vercel.",
             },
           },
           {
             "@type": "Question",
-            name: "What featured web applications are in Talha Salman's portfolio?",
+            name: "What projects have you built?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Key portfolio projects include an Online Banking System built with React, Node.js, and JWT authentication; a Modern Restaurant & Food Ordering web application featuring interactive menus; and a School Management System administrative portal.",
+              text: "My portfolio includes a banking app, a restaurant ordering site, and a school portal. The banking app uses React, Node.js, and JWT sign-in.",
             },
           },
           {
             "@type": "Question",
-            name: "Is Talha Salman available for remote web development work?",
+            name: "Are you open to remote work?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. Talha Salman is based in Karachi, Pakistan, and is available for worldwide remote work, freelance contract development, and technical consultations.",
+              text: "Yes. I am based in Karachi, Pakistan, and am open to remote work, freelance projects, and technical consulting.",
             },
           },
           {
             "@type": "Question",
-            name: "How can I contact Talha Salman for a project?",
+            name: "How can I contact you?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "You can send project inquiries through the contact page form on this website, or connect directly through verified profiles on GitHub (github.com/talhadev30) and LinkedIn (linkedin.com/in/m-talha-salman-66832839b).",
+              text: "Use the contact form to tell me about your project. You can also reach me on GitHub or LinkedIn.",
             },
           },
         ],
@@ -138,9 +138,9 @@ export const getJsonLdForRoute = (routePath) => {
         "@type": "CollectionPage",
         "@id": `${SITE_URL}/work#webpage`,
         url: `${SITE_URL}/work`,
-        name: "Featured Projects & Case Studies | Talha Salman",
+        name: "Web Development Projects | Talha Salman",
         description:
-          "Explore case studies and web apps by Talha Salman: Banking System, Food Ordering platform, and School portal built with React, Node.js, and modern tools.",
+          "See web projects by Talha Salman, including banking, restaurant, and school apps built with React and Node.js.",
         isPartOf: { "@id": websiteId },
         inLanguage: "en",
         mainEntity: { "@id": itemListId },
@@ -157,9 +157,9 @@ export const getJsonLdForRoute = (routePath) => {
       "@type": "ProfilePage",
       "@id": `${SITE_URL}/info#webpage`,
       url: `${SITE_URL}/info`,
-      name: "About Talha Salman | Full Stack Web Developer",
+      name: "About Talha Salman | Web Developer in Karachi",
       description:
-        "Learn about Talha Salman, Full Stack Developer in Karachi, Pakistan. Explore engineering skills in React, Node.js, Express, MongoDB, PHP, and modern web.",
+        "Meet Talha Salman, a web developer in Karachi. Explore his work with React, Node.js, PHP, and databases.",
       isPartOf: { "@id": websiteId },
       mainEntity: { "@id": personId },
       inLanguage: "en",
@@ -169,9 +169,9 @@ export const getJsonLdForRoute = (routePath) => {
       "@type": "ContactPage",
       "@id": `${SITE_URL}/contact#webpage`,
       url: `${SITE_URL}/contact`,
-      name: "Contact Talha Salman | Hire Full Stack Developer",
+      name: "Contact Talha Salman | Web Development",
       description:
-        "Get in touch with Talha Salman for custom web development, React and Node.js applications, freelance contracts, and software engineering opportunities.",
+        "Contact Talha Salman about websites, web apps, freelance projects, or software development roles.",
       isPartOf: { "@id": websiteId },
       mainEntity: { "@id": personId },
       inLanguage: "en",

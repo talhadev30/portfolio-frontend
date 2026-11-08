@@ -12,7 +12,7 @@ export const OWNER = {
   locality: "Karachi",
   email: "talhasalman@example.com", // Form routes via Web3Forms securely
   availability: "Available for freelance contracts, remote roles & technical consultations",
-  bio: "Full Stack Web Developer specializing in React, Node.js, Express, MongoDB, and high-performance digital web applications.",
+  bio: "Web developer in Karachi who builds websites and web apps with React, Node.js, Express, and MongoDB.",
   socials: [
     {
       name: "GitHub",
@@ -48,7 +48,7 @@ export const PROJECTS = [
     category: "Full Stack Application",
     tech: ["React.js", "Node.js", "Express", "Tailwind CSS", "JWT Auth"],
     description:
-      "A secure, responsive banking portal featuring real-time account balances, fund transfers, transaction histories, and protected user authentication flows. Built with scalable REST APIs and modern React state management.",
+      "A banking app with account balances, transfers, and transaction history. It uses React, Node.js, and secure sign-in.",
     liveLink: "https://talha-banking-system.vercel.app/",
     image: "/project1.webp",
     alt: "Online Banking System Web Application Screenshot",
@@ -59,7 +59,7 @@ export const PROJECTS = [
     category: "E-Commerce & Hospitality",
     tech: ["React", "JavaScript (ES6+)", "Tailwind CSS", "GSAP Animations"],
     description:
-      "An engaging web platform for food ordering and culinary showcases. Features dynamic category filtering, interactive shopping cart simulation, smooth page animations, and an optimized mobile layout.",
+      "A restaurant site with a menu, food filters, and a shopping cart demo. It also has page animations and a mobile layout.",
     liveLink: null,
     image: "/product2.webp",
     alt: "Modern Restaurant and Food Ordering Web Application Screenshot",
@@ -70,7 +70,7 @@ export const PROJECTS = [
     category: "Management Dashboard",
     tech: ["React", "Node.js", "MySQL / MongoDB", "Express", "REST APIs"],
     description:
-      "A comprehensive institutional management system with role-based dashboards for students, teachers, and administrators. Supports enrollment tracking, attendance logging, and academic performance reporting.",
+      "A school portal with separate dashboards for students, teachers, and staff. It tracks enrollment, attendance, and grades.",
     liveLink: null,
     image: "/product3.webp",
     alt: "School Management System Web Portal Screenshot",

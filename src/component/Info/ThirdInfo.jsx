@@ -82,12 +82,9 @@ const Thirdinfo = () => {
           Frontend, Backend, Database & Engineering Tooling
         </p>
         <p ref={pararef} className="text-sm leading-relaxed text-zinc-300 py-3 md:text-xl lg:text-sm 2xl:text-base">  
-          As a Full Stack Developer, I craft modern web applications that combine
-          intuitive user experiences with scalable backend architecture. From
-          responsive React interfaces to powerful APIs built with Node.js and PHP,
-          I focus on creating fast, secure, and high-performance digital solutions.
-          My goal is to transform ideas into impactful products that deliver real
-          value to users and businesses.
+          I build web apps with clear interfaces and useful features. I use React
+          for pages and Node.js or PHP for APIs. I aim to make each project fast,
+          safe, and simple to use.
         </p>
       </div>
   

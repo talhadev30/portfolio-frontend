@@ -10,23 +10,23 @@ const HomeOverview = () => {
         {/* Section Header with Semantic Subheadings */}
         <div className="mb-14">
           <span className="text-xs uppercase tracking-widest text-zinc-400 font-semibold">
-            Services & Expertise
+            What I Build
           </span>
           <h2 className="font-[League] text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter mt-2 mb-6">
-            Full Stack Web Development & Digital Engineering
+            Websites and Web Apps
           </h2>
           <p className="text-xl md:text-2xl text-zinc-300 font-light max-w-3xl leading-relaxed">
-            Crafting high-performance web applications, responsive user interfaces, and scalable backend architectures tailored for business growth.
+            I build fast, easy-to-use websites and web apps for phones, tablets, and computers.
           </p>
         </div>
 
-        {/* Detailed SEO-rich Content Paragraphs (Over 180 words) */}
+        {/* Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 text-zinc-300 text-sm md:text-base leading-relaxed">
           <p>
-            Welcome to my portfolio! As a dedicated Full Stack Web Developer based in Karachi, Pakistan, I specialize in engineering modern, fast, and SEO-friendly digital web applications. Combining cutting-edge frontend technologies like React, JavaScript (ES6+), and Tailwind CSS with robust backend solutions powered by Node.js, Express.js, and databases such as MongoDB and MySQL, I transform complex ideas into intuitive, scalable software products.
+            I am a web developer in Karachi, Pakistan. I use React, JavaScript, and Tailwind CSS to build clear and responsive pages. I also work with Node.js, Express, MongoDB, and MySQL.
           </p>
           <p>
-            Whether you are looking to build a high-converting web platform from scratch, modernize an existing interface with fluid GSAP animations, or engineer reliable RESTful APIs, I provide end-to-end web development services tailored to client needs and search engine visibility. Every project is developed with clean modular code, fast loading speeds, mobile responsiveness, and accessibility at its core.
+            I can build a new site, improve an existing one, or connect it to an API. I aim for quick load times, simple navigation, and a layout that works on every screen.
           </p>
         </div>
 
@@ -39,10 +39,10 @@ const HomeOverview = () => {
                 <Code2 size={24} />
               </div>
               <h3 className="font-[League] text-3xl uppercase tracking-tight mb-3">
-                Modern Frontend Architecture
+                Frontend Pages
               </h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                Building interactive, mobile-first single-page applications with React, Tailwind CSS, and smooth micro-interactions that engage users across every screen size.
+                I build interactive pages with React and Tailwind CSS. They work across screen sizes and are easy to use.
               </p>
             </div>
             <Link
@@ -61,10 +61,10 @@ const HomeOverview = () => {
                 <Server size={24} />
               </div>
               <h3 className="font-[League] text-3xl uppercase tracking-tight mb-3">
-                Scalable Backend & APIs
+                Back End and APIs
               </h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                Engineering secure REST APIs with Node.js, Express, and database models in MongoDB and MySQL, featuring JWT authentication and reliable data workflows.
+                I build APIs with Node.js and Express, and store data in MongoDB or MySQL. I can add secure sign-in.
               </p>
             </div>
             <Link
@@ -83,10 +83,10 @@ const HomeOverview = () => {
                 <Gauge size={24} />
               </div>
               <h3 className="font-[League] text-3xl uppercase tracking-tight mb-3">
-                Speed, SEO & Indexing
+                Site Speed and Search
               </h3>
               <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                Optimizing Core Web Vitals, semantic markup, sitemaps, structured data, and server prerendering to help web applications rank prominently on Google search.
+                I work on page speed, clear HTML, sitemaps, and search previews to help people find each site.
               </p>
             </div>
             <Link

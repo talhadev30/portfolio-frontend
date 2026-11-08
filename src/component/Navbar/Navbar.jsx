@@ -202,7 +202,7 @@ const Navbar = () => {
             <Navlink name="Contact" path="/contact" onNavigate={closeAfterNavigation} />
           </div>
           <div className='border-t-4 flex lg:flex-row items-start justify-start lg:justify-between py-5 flex-wrap gap-y-10 gap-20'>
-            {OWNER.socials.map((social) => (
+            {OWNER.socials.filter(({ name }) => name === 'GitHub' || name === 'LinkedIn').map((social) => (
               <Sociallink key={social.name} name={social.name.toLowerCase()} label={social.label} Link={social.url} />
             ))}
           </div>

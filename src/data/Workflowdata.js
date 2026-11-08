@@ -8,9 +8,9 @@ const workflowData = [
     left: "0rem",
     mdtop: "0rem",
     subparagraf:
-      "Understanding project goals and creating a clear development plan.",
+      "Agreeing on the goals, features, and timeline.",
     paragraf:
-      "Every project starts with careful planning. I gather requirements, understand your business objectives, define features, and create a structured roadmap to ensure the development process is smooth, organised, and delivered on time."
+      "First, I learn what the project needs. Then we agree on the features, make a plan, and set a timeline."
   },
   {
     numbers: 2,
@@ -21,9 +21,9 @@ const workflowData = [
     left: "8rem",
     mdtop: "15rem",
     subparagraf:
-      "Building responsive, modern, and interactive user interfaces.",
+      "Building pages that work on phones and computers.",
     paragraf:
-      "I develop clean and responsive frontend interfaces using modern technologies like React and Tailwind CSS. Every page is optimised for speed, accessibility, mobile devices, and an excellent user experience."
+      "I build pages with React and Tailwind CSS. I make them work on phones and computers and keep them easy to use."
   },
   {
     numbers: 3,
@@ -34,9 +34,9 @@ const workflowData = [
     left: "17.5rem",
     mdtop: "30rem",
     subparagraf:
-      "Developing secure APIs, databases, and server-side logic.",
+      "Connecting APIs, databases, and sign-in.",
     paragraf:
-      "The backend handles the application's functionality. I build secure REST APIs, integrate databases, implement authentication and authorisation, and optimise performance to create scalable and reliable web applications."
+      "I build APIs and connect databases. I can add sign-in and help protect user data."
   },
   {
     numbers: 4,
@@ -47,9 +47,9 @@ const workflowData = [
     left: "0rem",
     mdtop: "45rem",
     subparagraf:
-      "Ensuring quality through testing and bug fixing.",
+      "Checking pages and fixing bugs.",
     paragraf:
-      "Before deployment, I thoroughly test the application to identify and resolve bugs, improve performance, verify responsiveness, and ensure compatibility across different browsers and devices."
+      "I check each page, fix bugs, and test it on phones, computers, and common browsers."
   },
   {
     numbers: 5,
@@ -60,9 +60,9 @@ const workflowData = [
     left: "10rem",
     mdtop: "60rem",
     subparagraf:
-      "Launching the project with ongoing monitoring and support.",
+      "Launching the site and checking it after release.",
     paragraf:
-      "Once testing is complete, I deploy the application to a production environment, configure hosting, optimise performance and SEO, monitor stability, and provide ongoing maintenance and updates."
+      "I set up hosting and launch the site. I can check its speed and fix issues after launch."
   },
 ];
 
